@@ -355,6 +355,14 @@ nav .container ul a:hover {
   width: 40%;
 }
 
+@media screen and (max-width: 580px) {
+  .education .container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
 .education .step {
   padding: 10px;
   display: flex;

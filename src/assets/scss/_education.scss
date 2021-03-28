@@ -16,6 +16,12 @@
 
   .container {
     width: 40%;
+
+    @include small {
+      width: 80%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
   }
 
   .step {
