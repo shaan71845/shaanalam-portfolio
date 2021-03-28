@@ -1,26 +1,41 @@
 import { motion } from "framer-motion";
 
+const variants = {
+  initial: {
+    y: -10,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+  },
+  transition: { ease: "easeIn", duration: 1 },
+};
+
 const HeroSection = () => (
   <section className="home">
     <div className="container">
       <motion.img
         src="/images/me.png"
         alt="Shaan Alam"
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        variants={variants}
+        initial="initial"
+        animate="animate"
         transition={{ ease: "easeIn", duration: 1 }}
       />
       <motion.h1
         className="home__myName"
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        variants={variants}
+        initial="initial"
+        animate="animate"
         transition={{ ease: "easeIn", duration: 1 }}
       >
         Shaan Alam
       </motion.h1>
       <motion.p
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        variants={variants}
+        initial="initial"
+        animate="animate"
         transition={{ ease: "easeIn", duration: 1 }}
       >
         Hi there 👋️, I'm Shaan Alam. I am a Front-end Developer. I like to
@@ -29,8 +44,9 @@ const HeroSection = () => (
       </motion.p>
       <motion.div
         className="home__actions"
-        initial={{ y: -10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        variants={variants}
+        initial="initial"
+        animate="animate"
         transition={{ ease: "easeIn", duration: 1.5 }}
       >
         <a href="#!" className="btn__primary">
