@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
 }
@@ -38,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .home .container {
@@ -100,7 +106,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 1rem auto;
-  width: 40%;
+  width: 45%;
 }
 
 @media screen and (max-width: 768px) {
@@ -130,6 +136,10 @@ body {
 nav {
   width: 100%;
   padding: 1.7rem 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
 }
 
 nav .container {
@@ -256,6 +266,7 @@ nav .container ul a:hover {
 .aboutme__rightContainer img {
   width: 70%;
   height: 60%;
+  box-shadow: 0 5px 50px #233047;
 }
 
 @media screen and (max-width: 900px) {

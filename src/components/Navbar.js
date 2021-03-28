@@ -1,15 +1,15 @@
 const Navbar = () => {
   return (
-    <nav>
+    <nav id="nav">
       <div className="container">
         <ul>
           <li>
-            <a href="#!" className="active">
+            <a href="#nav" className="active">
               Home
             </a>
           </li>
           <li>
-            <a href="#!">About me</a>
+            <a href="#about-me">About me</a>
           </li>
           <li>
             <a href="#!">Projects</a>

@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   .container {
     padding: 2rem;
@@ -61,7 +62,7 @@
       display: flex;
       justify-content: space-around;
       margin: 1rem auto;
-      width: 40%;
+      width: 45%;
 
       @include medium {
         width: 60%;

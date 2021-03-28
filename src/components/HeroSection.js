@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Navbar from "./Navbar";
 
 const variants = {
   initial: {
@@ -13,7 +14,7 @@ const variants = {
 };
 
 const HeroSection = () => (
-  <section className="home">
+  <section className="home" id="home">
     <div className="container">
       <motion.img
         src="/images/me.png"
@@ -55,7 +56,6 @@ const HeroSection = () => (
         <a
           href="https://github.com/shaan71845/python_notes/files/6216889/CV.Shaan.Alam.pdf"
           className="btn__primary"
-          downlaod={true}
         >
           Download CV
         </a>
