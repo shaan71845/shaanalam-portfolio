@@ -177,20 +177,23 @@ nav .container ul a:hover {
   }
   nav .container ul {
     display: flex;
-    height: 80vh;
+    height: 0vh;
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    top: 0%;
-    left: -100%;
+    top: -100%;
+    left: 0%;
     right: 0;
     background-color: #fff;
     transition: all 0.4s;
   }
   nav .container ul.visible {
-    left: 0%;
+    padding: 6rem 0;
+    position: absolute;
+    top: 0%;
+    height: 80vh;
   }
 }
 
@@ -218,7 +221,7 @@ nav .container ul a:hover {
 }
 
 .nav__menuToggler.cross div:nth-child(1) {
-  transform: rotate(-45deg) translate(-6px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
 }
 
 .nav__menuToggler.cross div:nth-child(2) {
@@ -321,7 +324,7 @@ nav .container ul a:hover {
 .aboutme__rightContainer img {
   width: 70%;
   height: 60%;
-  box-shadow: 0 5px 50px #233047;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 900px) {
@@ -329,5 +332,79 @@ nav .container ul a:hover {
     width: 30%;
     height: 70%;
   }
+}
+
+.education {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.education h1 {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  color: #121925;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.education .container {
+  width: 40%;
+}
+
+.education .step {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: cream;
+}
+
+.education .v-stepper {
+  position: relative;
+  /*   visibility: visible; */
+}
+
+.education .step .line {
+  top: 21px;
+  left: 9px;
+  height: 100%;
+  position: absolute;
+}
+
+.education .step.completed .circle {
+  background-color: white;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  width: 20px;
+  /* +6 for border */
+  height: 20px;
+  display: inline-block;
+  visibility: visible;
+  background-color: #233047;
+}
+
+.education .step.completed .line {
+  border-left: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.education .content {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.step .content .content__heading h2 {
+  color: #121925;
+  font-family: "Noto Serif", serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.step .content .content__heading p {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Raleway", sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */

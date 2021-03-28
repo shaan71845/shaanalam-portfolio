@@ -82,7 +82,7 @@
     img {
       width: 70%;
       height: 60%;
-      box-shadow: 0 5px 50px lighten($primary-color, 10%);
+      box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
 
       @include large {
         width: 30%;

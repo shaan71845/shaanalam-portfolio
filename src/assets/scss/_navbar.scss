@@ -41,20 +41,23 @@ nav {
 
       ul {
         display: flex;
-        height: 80vh;
+        height: 0vh;
         width: 100%;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        top: 0%;
-        left: -100%;
+        top: -100%;
+        left: 0%;
         right: 0;
         background-color: #fff;
         transition: all 0.4s;
 
         &.visible {
-          left: 0%;
+          padding: 6rem 0;
+          position: absolute;
+          top: 0%;
+          height: 80vh;
         }
       }
     }
@@ -81,12 +84,12 @@ nav {
     transition: 0.4s;
   }
 
-  // TO make the hamburger to cross icon
+  // To make the hamburger to cross icon
 
   &.cross {
     div:nth-child(1) {
-      -webkit-transform: rotate(-45deg) translate(-6px, 5px);
-      transform: rotate(-45deg) translate(-6px, 5px);
+      -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+      transform: rotate(-45deg) translate(-5px, 5px);
     }
 
     div:nth-child(2) {

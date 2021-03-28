@@ -1,0 +1,76 @@
+.education {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: $font-noto;
+    font-style: italic;
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    width: 40%;
+  }
+
+  .step {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    background-color: cream;
+  }
+
+  .v-stepper {
+    position: relative;
+    /*   visibility: visible; */
+  }
+
+  .step .line {
+    top: 21px;
+    left: 9px;
+    height: 100%;
+    position: absolute;
+  }
+
+  .step.completed .circle {
+    background-color: white;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    width: 20px; /* +6 for border */
+    height: 20px;
+    display: inline-block;
+    visibility: visible;
+    background-color: lighten($primary-color, 10%);
+  }
+
+  .step.completed .line {
+    border-left: 2px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .content {
+    margin-left: 20px;
+    display: inline-block;
+  }
+}
+
+.step .content .content__heading {
+  h2 {
+    color: $primary-color;
+    font-family: $font-noto;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: $font-raleway;
+  }
+}
