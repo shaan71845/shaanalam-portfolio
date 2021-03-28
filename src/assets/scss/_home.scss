@@ -13,12 +13,12 @@
     text-align: center;
     margin-top: -1rem;
 
-    @include tablet {
+    @include medium {
       width: 80%;
     }
 
     @include small {
-      tablet {
+      medium {
         width: 100%;
       }
     }
@@ -33,6 +33,7 @@
     p {
       color: rgba(0, 0, 0, 0.6);
       line-height: 1.8;
+      font-family: $font-raleway;
 
       @include small {
         font-size: small;
@@ -62,7 +63,7 @@
       margin: 1rem auto;
       width: 40%;
 
-      @include tablet {
+      @include medium {
         width: 60%;
       }
 

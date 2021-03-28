@@ -56,7 +56,7 @@ body {
 }
 
 @media screen and (max-width: 580px) {
-  .home .container tablet {
+  .home .container medium {
     width: 100%;
   }
 }
@@ -70,6 +70,7 @@ body {
 .home .container p {
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.8;
+  font-family: "Raleway", sans-serif;
 }
 
 @media screen and (max-width: 580px) {
@@ -166,6 +167,13 @@ nav .container ul a:hover {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 900px) {
+  .aboutme {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+}
+
 .aboutme__leftContainer {
   flex: 2;
   padding: 2rem;
@@ -173,6 +181,12 @@ nav .container ul a:hover {
 
 .aboutme__leftContainer .aboutme__text {
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .aboutme__leftContainer .aboutme__text {
+    text-align: center;
+  }
 }
 
 .aboutme__leftContainer .aboutme__text h1 {
@@ -191,6 +205,12 @@ nav .container ul a:hover {
 
 .aboutme__leftContainer .aboutme__skills {
   margin: 3rem 0;
+}
+
+@media screen and (max-width: 900px) {
+  .aboutme__leftContainer .aboutme__skills {
+    text-align: center;
+  }
 }
 
 .aboutme__leftContainer .aboutme__skills h2 {
@@ -218,5 +238,12 @@ nav .container ul a:hover {
 .aboutme__rightContainer img {
   width: 70%;
   height: 60%;
+}
+
+@media screen and (max-width: 900px) {
+  .aboutme__rightContainer img {
+    width: 30%;
+    height: 70%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

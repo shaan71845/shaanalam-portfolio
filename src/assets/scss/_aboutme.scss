@@ -4,6 +4,11 @@
   display: flex;
   justify-content: space-between;
 
+  @include large {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
   // Left Container
   &__leftContainer {
     flex: 2;
@@ -12,6 +17,9 @@
     // About me paragraph
     .aboutme__text {
       margin-top: 2rem;
+      @include large {
+        text-align: center;
+      }
 
       h1 {
         margin: 1rem 0;
@@ -31,6 +39,9 @@
     // Skills section
     .aboutme__skills {
       margin: 3rem 0;
+      @include large {
+        text-align: center;
+      }
 
       h2 {
         font-family: $font-noto;
@@ -59,6 +70,11 @@
     img {
       width: 70%;
       height: 60%;
+
+      @include large {
+        width: 30%;
+        height: 70%;
+      }
     }
   }
 }
