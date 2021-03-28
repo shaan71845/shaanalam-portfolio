@@ -1,0 +1,33 @@
+nav {
+  width: 100%;
+  padding: 1.7rem 0;
+
+  .container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+
+    // Menu list inside container
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+        font-family: $font-raleway;
+        transition: all 0.4s;
+
+        &.active {
+          color: #000;
+        }
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}

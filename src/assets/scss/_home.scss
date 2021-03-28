@@ -1,0 +1,84 @@
+.home {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    padding: 2rem;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include small {
+      tablet {
+        width: 100%;
+      }
+    }
+
+    // My avatar
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+    }
+
+    p {
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.8;
+
+      @include small {
+        font-size: small;
+      }
+    }
+
+    // My name
+    .home__myName {
+      font-family: $font-noto;
+      font-weight: bold;
+      font-style: italic;
+      color: $primary-color;
+      margin-top: 20px;
+      font-size: 2rem;
+
+      @include small {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Home action buttons
+    .home__actions {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem auto;
+      width: 40%;
+
+      @include tablet {
+        width: 60%;
+      }
+
+      @include small {
+        width: 70%;
+        flex-direction: column;
+      }
+
+      a {
+        @include small {
+          margin: 10px 0;
+          display: block;
+        }
+
+        margin-right: 10px;
+
+      }
+    }
+  }
+}
