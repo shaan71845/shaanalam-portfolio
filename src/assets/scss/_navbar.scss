@@ -40,20 +40,21 @@ nav {
       justify-content: center;
 
       ul {
-        display: none;
+        display: flex;
+        height: 80vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        right: 0;
+        background-color: #fff;
+        transition: all 0.4s;
 
         &.visible {
-          display: flex;
-          height: 80vh;
-          width: 100%;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          position: absolute;
-          top: 10%;
-          left: 0;
-          right: 0;
-          background-color: #fff;
+          left: 0%;
         }
       }
     }
