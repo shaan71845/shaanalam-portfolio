@@ -314,7 +314,7 @@ nav .container ul a:hover {
 }
 
 .aboutme__leftContainer .aboutme__skills > *:not(h2) {
-  margin-right: 20px;
+  margin: 1rem 1rem 0 0;
   width: 70px;
   fill: #233047;
 }

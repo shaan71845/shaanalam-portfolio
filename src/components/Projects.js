@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Project from "./Project";
+import ProjectItem from "./ProjectItem";
 import { Context } from "../Context/GlobalState";
 
 const Projects = () => {
@@ -11,9 +11,10 @@ const Projects = () => {
       <h1>My Latest Projects</h1>
       <div className="container">
         <div className="projects__grid">
-          {state && state.projects?.map((project) => (
-            <Project project={project} />
-          ))}
+          {state &&
+            state.projects?.map((project) => (
+              <ProjectItem key={project.slug.current} project={project} />
+            ))}
         </div>
       </div>
     </section>

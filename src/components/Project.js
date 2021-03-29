@@ -1,11 +1,13 @@
-const Project = ({ project }) => {
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+const Project = () => {
+  // Fetch Data
+
   return (
-    <div className="project">
-      <div className="project__details">
-        <h3 className="project__title">{project.title}</h3>
-      </div>
-      <img src={project.mainImage.asset.url} alt={project.title} />
-    </div>
+    <section className="project__page">
+      <Link to="/" className="back__btn">&larr;</Link>
+    </section>
   );
 };
 

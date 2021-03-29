@@ -32,14 +32,7 @@ const Provider = ({ children }) => {
       .fetch(
         `*[_type == 'project'] {
           title,
-          author -> {
-            image {
-              asset -> {
-                url
-              }
-            }
-          },
-          body,
+          slug,
           mainImage {
             asset -> {
               url
@@ -56,3 +49,23 @@ const Provider = ({ children }) => {
 };
 
 export default Provider;
+
+// For a single Project Page
+// *[_type == 'project' && slug.current == 'whatsapp-clone']{
+//   title,
+//   body,
+// 	live_url,
+//   github_url,
+//   author -> {
+// 		image {
+// 			asset -> {
+// 				url
+// 			}
+// 		}
+// 	},
+//   mainImage {
+// 		asset -> {
+// 			url
+// 		}
+// 	}
+// }

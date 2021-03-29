@@ -24,6 +24,16 @@ export default {
       to: { type: "author" },
     },
     {
+      name: "live_url",
+      title: "Live URL",
+      type: "string",
+    },
+    {
+      name: "github_url",
+      title: "GitHub URL",
+      type: "string",
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",

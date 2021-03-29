@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import DevIcon from "devicon-react-svg";
+// import DevIcon from "devicon-react-svg";
 import { Context } from "../Context/GlobalState";
 import BlockContent from "@sanity/block-content-to-react";
 
@@ -19,12 +19,12 @@ const AboutMe = () => {
         </div>
         <div className="aboutme__skills">
           <h2>Skills I have</h2>
-          <DevIcon icon="html5" />
-          <DevIcon icon="css3" />
-          <DevIcon icon="sass" />
-          <DevIcon icon="javascript" />
-          <DevIcon icon="react" />
-          <DevIcon icon="firebase" />
+          <img src="/images/html.svg" alt="HTML5"/>
+          <img src="/images/css.svg" alt="CSS3"/>
+          <img src="/images/sass.svg" alt="Scss"/>
+          <img src="/images/javascript.svg" alt="JavaScript"/>
+          <img src="/images/react.svg" alt="ReactJS"/>
+          <img src="/images/firebase.svg" alt="Firebase"/>
         </div>
       </div>
       <div className="aboutme__rightContainer">
