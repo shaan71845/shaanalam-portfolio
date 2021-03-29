@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
         <ul className={`${navOpen ? "visible" : ""}`}>
           <li>
-            <a href="#nav" className="active">
+            <a href="#home" className="active">
               Home
             </a>
           </li>

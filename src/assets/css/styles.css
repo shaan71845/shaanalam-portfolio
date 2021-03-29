@@ -135,11 +135,12 @@ body {
 
 nav {
   width: 100%;
-  padding: 1.7rem 0;
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   left: 0;
   background-color: #fff;
+  z-index: 11;
 }
 
 nav .container {
@@ -162,10 +163,6 @@ nav .container ul a {
   transition: all 0.4s;
 }
 
-nav .container ul a.active {
-  color: #000;
-}
-
 nav .container ul a:hover {
   color: #000;
 }
@@ -186,20 +183,27 @@ nav .container ul a:hover {
     top: -100%;
     left: 0%;
     right: 0;
-    background-color: #fff;
+    background-color: #121925;
+    z-index: 3;
     transition: all 0.4s;
   }
   nav .container ul.visible {
     padding: 6rem 0;
     position: absolute;
     top: 0%;
-    height: 80vh;
+    height: 100vh;
+  }
+  nav .container ul a {
+    color: #fff;
+  }
+  nav .container ul a:hover {
+    color: #fff;
   }
 }
 
 .nav__menuToggler {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   display: none;
   width: 35px;
   height: 35px;
@@ -215,16 +219,18 @@ nav .container ul a:hover {
 .nav__menuToggler div {
   width: 100%;
   height: 3px;
-  background-color: #333;
+  background-color: #121925;
   margin: 6px 0;
   transition: 0.4s;
 }
 
 .nav__menuToggler.cross div:nth-child(1) {
+  background: #fff;
   transform: rotate(-45deg) translate(-5px, 5px);
 }
 
 .nav__menuToggler.cross div:nth-child(2) {
+  background: #fff;
   transform: rotate(45deg) translate(0, -3px);
 }
 
@@ -372,6 +378,7 @@ nav .container ul a:hover {
 }
 
 .education .v-stepper {
+  z-index: -1;
   position: relative;
   /*   visibility: visible; */
 }
@@ -381,6 +388,7 @@ nav .container ul a:hover {
   left: 9px;
   height: 100%;
   position: absolute;
+  z-index: -1;
 }
 
 .education .step.completed .circle {
@@ -417,7 +425,6 @@ nav .container ul a:hover {
 }
 
 .projects {
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -453,6 +460,7 @@ nav .container ul a:hover {
 
 .projects .project img {
   width: 100%;
+  position: relative;
 }
 
 .projects .project .project__details {
@@ -468,7 +476,7 @@ nav .container ul a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 1;
   transition: all 0.4s;
 }
 
