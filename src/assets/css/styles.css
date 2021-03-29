@@ -52,7 +52,6 @@ body {
   margin: auto;
   overflow: hidden;
   text-align: center;
-  margin-top: -1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -505,6 +504,16 @@ nav .container ul a:hover {
   font-size: 1.3rem;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
+}
+
+.project__page .back__btn span {
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.project__page .back__btn:hover span {
+  margin-right: 12px;
+  opacity: 1;
 }
 
 @media screen and (max-width: 580px) {

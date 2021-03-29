@@ -1,17 +1,19 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
 import Project from "./components/Project";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  const location = useLocation();
+
   return (
-    <Router>
+    <AnimatePresence exitBeforeEnter initial={false}>
       {/* <Navbar /> */}
-      <Switch>
+      <Switch location={location} key={location.pathname}>
         <Route path="/" component={Home} exact />
         <Route path="/project/:slug/" component={Project} />
       </Switch>
-    </Router>
+    </AnimatePresence>
   );
 };
 

@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import BlockContent from "@sanity/block-content-to-react";
 import sanityClient from "../client";
 import dateformat from "dateformat";
+import { motion } from "framer-motion";
 
 const Project = () => {
   const [project, setProject] = useState(null);
@@ -41,10 +42,16 @@ const Project = () => {
   }, []);
 
   return (
-    <section className="project__page">
+    <motion.section
+      className="project__page"
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: 100, opacity: 0 }}
+      transition={{ delay: 1, type: "tween" }}
+    >
       <div className="container">
         <Link to="/" className="back__btn">
-          &larr; Go back
+          <span>&larr;</span> Go back
         </Link>
         <div className="header__img">
           <img src={project?.mainImage.asset.url} alt={project?.title} />
@@ -92,7 +99,7 @@ const Project = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
