@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
+
 
 const variants = {
   initial: {
@@ -50,7 +50,7 @@ const HeroSection = () => (
         animate="animate"
         transition={{ ease: "easeIn", duration: 1.5 }}
       >
-        <a href="#!" className="btn__primary">
+        <a href="#projects" className="btn__primary">
           Projects
         </a>
         <a

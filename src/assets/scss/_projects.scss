@@ -24,11 +24,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-gap: 1rem;
-    align-items: center;
   }
 
   .project {
     position: relative;
+    transition: all 0.4s;
 
     // Project sample image
     img {
@@ -58,8 +58,14 @@
       transition: all 0.4s;
     }
 
+    // Show .project__details on hover
     &:hover .project__details {
       opacity: 0.7;
+    }
+
+    // Scale project to 1.1x on hover
+    &:hover {
+      transform: scale(1.051);
     }
   }
 }

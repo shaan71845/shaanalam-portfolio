@@ -451,11 +451,11 @@ nav .container ul a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 1rem;
-  align-items: center;
 }
 
 .projects .project {
   position: relative;
+  transition: all 0.4s;
 }
 
 .projects .project img {
@@ -482,5 +482,9 @@ nav .container ul a:hover {
 
 .projects .project:hover .project__details {
   opacity: 0.7;
+}
+
+.projects .project:hover {
+  transform: scale(1.051);
 }
 /*# sourceMappingURL=styles.css.map */

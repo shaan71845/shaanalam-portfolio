@@ -26,6 +26,32 @@ const Provider = ({ children }) => {
       });
   }, []);
 
+  useEffect(() => {
+    // Fetch Projects
+    sanityClient
+      .fetch(
+        `*[_type == 'project'] {
+          title,
+          author -> {
+            image {
+              asset -> {
+                url
+              }
+            }
+          },
+          body,
+          mainImage {
+            asset -> {
+              url
+            }
+          }
+        }`
+      )
+      .then((data) => {
+        setState((state) => ({ ...state, projects: data }));
+      });
+  }, []);
+
   return <Context.Provider value={{ state }}>{children}</Context.Provider>;
 };
 
