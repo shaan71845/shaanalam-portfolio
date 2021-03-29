@@ -75,10 +75,6 @@
     }
 
     // Block content headings
-    figure img {
-      width: 100%;
-    }
-
     h2,
     h3 {
       margin: 0.7rem 0;
@@ -86,6 +82,14 @@
     }
 
     // Block content images
+    figure img {
+      width: 100%;
+    }
+
+    // Block content links
+    a {
+      color: $primary-color;
+    }
 
     // Media queries for .project__details
     @include small {

@@ -571,14 +571,18 @@ nav .container ul a:hover {
   line-height: 1.6;
 }
 
-.project__page .project__details figure img {
-  width: 100%;
-}
-
 .project__page .project__details h2,
 .project__page .project__details h3 {
   margin: 0.7rem 0;
   display: block;
+}
+
+.project__page .project__details figure img {
+  width: 100%;
+}
+
+.project__page .project__details a {
+  color: #121925;
 }
 
 @media screen and (max-width: 580px) {
