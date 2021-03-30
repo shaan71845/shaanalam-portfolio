@@ -6,8 +6,8 @@ export const Context = createContext(null);
 const Provider = ({ children }) => {
   const [state, setState] = useState(null);
 
+  // Fetch author ====> Shaan Alam from Sanity io
   useEffect(() => {
-    // Fetch author ====> Shaan Alam
     sanityClient
       .fetch(
         `*[_type == 'author'] {
@@ -26,8 +26,8 @@ const Provider = ({ children }) => {
       });
   }, []);
 
+  // Fetch Projects from sanity io
   useEffect(() => {
-    // Fetch Projects
     sanityClient
       .fetch(
         `*[_type == 'project'] {
@@ -45,9 +45,16 @@ const Provider = ({ children }) => {
       });
   }, []);
 
+  // Fetch from dev.to API
+  useEffect(() => {
+    fetch("https://dev.to/api/articles?username=shaan71845")
+      .then((res) => res.json())
+      .then((res) => {
+        setState((state) => ({ ...state, blog_posts: res }));
+      });
+  }, []);
+
   return <Context.Provider value={{ state }}>{children}</Context.Provider>;
 };
 
 export default Provider;
-
-

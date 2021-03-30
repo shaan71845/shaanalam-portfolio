@@ -13,7 +13,6 @@
     overflow: hidden;
     text-align: center;
 
-    
     @include large {
       width: 80%;
     }
@@ -64,19 +63,7 @@
     // Home action buttons
     .home__actions {
       text-align: center;
-      display: flex;
-      justify-content: space-around;
-      margin: 1rem auto;
-      width: 45%;
-
-      @include medium {
-        width: 60%;
-      }
-
-      @include small {
-        width: 70%;
-        flex-direction: column;
-      }
+      margin: 2rem auto;
 
       a {
         @include small {

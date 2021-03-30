@@ -11,11 +11,13 @@ const AboutMe = () => {
         <div className="aboutme__leftContainer">
           <div className="aboutme__text">
             <h1>About me</h1>
-            <BlockContent
-              blocks={state?.author.about}
-              projectId="izpqy9cv"
-              dataset="production"
-            />
+            {state && (
+              <BlockContent
+                blocks={state?.author.about}
+                projectId="izpqy9cv"
+                dataset="production"
+              />
+            )}
           </div>
           <div className="aboutme__skills">
             <h4>Skills</h4>

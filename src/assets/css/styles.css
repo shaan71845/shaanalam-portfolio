@@ -109,23 +109,7 @@ body {
 
 .home .container .home__actions {
   text-align: center;
-  display: flex;
-  justify-content: space-around;
-  margin: 1rem auto;
-  width: 45%;
-}
-
-@media screen and (max-width: 768px) {
-  .home .container .home__actions {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .home .container .home__actions {
-    width: 70%;
-    flex-direction: column;
-  }
+  margin: 2rem auto;
 }
 
 .home .container .home__actions a {
