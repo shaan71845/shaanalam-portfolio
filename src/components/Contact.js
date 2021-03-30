@@ -2,8 +2,14 @@ import { useState, useEffect } from "react";
 import emailjs, { init } from "emailjs-com";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [successMsg, setSuccessMsg] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
+
   useEffect(() => {
-    init("user_TWa3mMAGPdTOaTe1n3ht9");
+    init("REACT_APP_USER_ID");
   }, []);
 
   const handleEmail = (e) => {
@@ -11,27 +17,38 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_2fidhhp",
-        "template_ucbkd48",
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        "user_TWa3mMAGPdTOaTe1n3ht9"
+        process.env.REACT_APP_USER_ID
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then((result) => {
+        console.log(result.text);
+        setEmail("");
+        setSubject("");
+        setMessage("");
+
+        setSuccessMsg("✅️ Your email has been successfully sent!");
+
+        // Clear the success msg after 3 seconds
+        setTimeout(() => {
+          setSuccessMsg(null);
+        }, 3000);
+      })
+      .catch(() => {
+        setSuccessMsg("❌️ Something went wrong!");
+
+        // Clear the error msg after 3 seconds
+        setTimeout(() => {
+          setErrorMsg(null);
+        }, 3000);
+      });
   };
 
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
   return (
-    <section className="contact">
+    <section className="contact" id="contactme">
+      {successMsg && <div className="success__msg">{successMsg}</div>}
+      {errorMsg && <div className="error__msg">{errorMsg}</div>}
       <div className="contact__container">
         <div className="contact__containerHeading">
           <h2>Wanna work togther??</h2>

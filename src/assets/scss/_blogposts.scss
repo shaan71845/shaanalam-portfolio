@@ -16,6 +16,10 @@
     font-style: italic;
     font-size: 2rem;
     text-align: center;
+
+    @include small {
+      font-size: 1.5rem;
+    }
   }
 
   .blog__grid {
@@ -59,7 +63,7 @@
 
     // Blog description
     .blog__description {
-      padding: 0.2rem  1.5rem;
+      padding: 0.2rem 1.5rem;
       h4 {
         color: $primary-color;
         font-family: $font-raleway;

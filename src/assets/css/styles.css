@@ -670,6 +670,12 @@ nav .container ul a:hover {
   text-align: center;
 }
 
+@media screen and (max-width: 580px) {
+  .blog__posts h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .blog__posts .blog__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -709,7 +715,7 @@ nav .container ul a:hover {
 }
 
 .blog__posts .blog .blog__description {
-  padding: 0.2rem  1.5rem;
+  padding: 0.2rem 1.5rem;
 }
 
 .blog__posts .blog .blog__description h4 {
@@ -745,6 +751,34 @@ nav .container ul a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.contact .success__msg,
+.contact .error__msg {
+  transition: all 0.4s;
+  position: absolute;
+  right: 10px;
+  bottom: 10%;
+  background: #121925;
+  padding: 10px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: small;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgba(18, 25, 37, 0.23);
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 10%;
+    opacity: 1;
+  }
 }
 
 .contact .contact__container {
@@ -763,6 +797,12 @@ nav .container ul a:hover {
   color: #121925;
 }
 
+@media screen and (max-width: 580px) {
+  .contact .contact__containerHeading h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .contact .contact__containerHeading p {
   margin-top: 1rem;
   color: #3f3f3f;
@@ -773,6 +813,16 @@ nav .container ul a:hover {
 .contact__container form {
   width: 50%;
   margin-top: 3rem;
+}
+
+@media screen and (max-width: 580px) {
+  .contact__container form {
+    width: 90%;
+  }
+}
+
+.contact__container form .btn__primary {
+  margin-top: 0.5rem;
 }
 
 .contact__container form .form__field {
@@ -807,6 +857,23 @@ nav .container ul a:hover {
 .contact__container form .form__field input:focus,
 .contact__container form .form__field textarea:focus {
   border-bottom-color: #121925;
+}
+
+.contact__container form .form__field input:focus,
+.contact__container form .form__field textarea:focus {
+  outline: none;
+}
+
+.contact__container form .form__field input:not(:valid),
+.contact__container form .form__field textarea:not(:valid) {
+  outline: none;
+  box-shadow: none;
+}
+
+.contact__container form .form__field input:not(:valid):focus,
+.contact__container form .form__field textarea:not(:valid):focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .contact__container form .form__field input:focus + label {
