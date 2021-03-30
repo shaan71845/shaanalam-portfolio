@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "dateformat": "^4.5.1",
     "devicon-react-svg": "^0.2.3",
+    "emailjs-com": "^2.6.4",
     "framer-motion": "^4.0.3",
     "react": "^17.0.2",
     "react-devicon": "^0.1.9",

@@ -1,0 +1,82 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact__container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &Heading {
+      h2 {
+        font-style: italic;
+        font-family: $font-noto;
+        font-size: 2rem;
+        color: $primary-color;
+      }
+
+      p {
+        margin-top: 1rem;
+        color: rgb(63, 63, 63);
+        font-size: 1rem;
+        font-family: $font-raleway;
+      }
+    }
+  }
+}
+
+.contact__container form {
+  width: 50%;
+  margin-top: 3rem;
+
+  .form__field {
+    margin: 0.5rem 0;
+    position: relative;
+
+    label {
+      font-family: $font-raleway;
+      font-size: smaller;
+      position: absolute;
+      top: 40%;
+      left: 2%;
+      color: #1b1b1b6d;
+      transition: all 0.4s;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 2px solid transparent;
+      font-family: $font-raleway;
+      width: 100%;
+      font-size: small;
+      border-radius: 0;
+      border-bottom-color: rgb(186, 186, 186);
+      padding: 1rem 0.4rem 0.4rem 0.4rem;
+      position: relative;
+      transition: all 0.4s;
+
+      &:focus {
+        border-bottom-color: $primary-color;
+      }
+    }
+
+    input:focus + label {
+      top: 0;
+      font-size: x-small;
+    }
+
+    input:valid + label {
+      top: 0;
+      font-size: x-small;
+    }
+  }
+}

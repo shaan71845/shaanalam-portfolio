@@ -1,5 +1,5 @@
 .blog__posts {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
 
@@ -24,6 +24,14 @@
     justify-items: center;
     grid-gap: 1rem;
     margin: 3rem 0;
+
+    @include medium {
+      grid-gap: 1.5rem;
+    }
+  }
+
+  .blog__link {
+    text-decoration: none;
   }
 
   // Individual Blog
@@ -32,6 +40,12 @@
     border-radius: 8px;
     box-shadow: 5px 10px 30px rgba($primary-color, 0.175);
     max-width: 400px;
+
+    // On blog hover
+    &:hover {
+      transform: scale(1.091);
+      box-shadow: 5px 10px 50px rgba($primary-color, 0.275);
+    }
 
     // Blog cover image div
     .blog__coverImg {
@@ -45,7 +59,7 @@
 
     // Blog description
     .blog__description {
-      padding: 0 1.5rem;
+      padding: 0.2rem  1.5rem;
       h4 {
         color: $primary-color;
         font-family: $font-raleway;
@@ -59,13 +73,15 @@
 
       img {
         margin-right: 12px;
-        width: 8%;
+        width: 25px;
+        height: 25px;
         border-radius: 100%;
       }
 
       p {
         color: rgba(0, 0, 0, 0.8);
-        font-size: 0.8rem;
+        font-size: small;
+        font-weight: 400;
         font-family: $font-raleway;
       }
     }

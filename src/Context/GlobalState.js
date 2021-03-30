@@ -52,11 +52,9 @@ const Provider = ({ children }) => {
       .then((res) => {
         const blog_posts = res.map((blog) => {
           return {
+            url: blog.url,
             title: blog.title,
-            description: blog.description,
             slug: blog.slug,
-            comment_count: blog.comment_count,
-            public_reactions_count: blog.public_reactions_count,
             published_timestamp: blog.published_timestamp,
             cover_image: blog.cover_image,
             name: blog.user.name,
