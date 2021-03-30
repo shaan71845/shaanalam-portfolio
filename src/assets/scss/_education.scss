@@ -12,6 +12,10 @@
     color: $primary-color;
     font-size: 2rem;
     margin-bottom: 2rem;
+
+    @include small {
+      font-size: 1.5rem;
+    }
   }
 
   .container {
@@ -75,6 +79,10 @@
     font-family: $font-raleway;
     font-size: 1.3rem;
     margin-bottom: 0.7rem;
+
+    @include small {
+      font-size: 1rem;
+    }
   }
 
   p {

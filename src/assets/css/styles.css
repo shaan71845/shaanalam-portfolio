@@ -48,13 +48,13 @@ body {
 
 .home .container {
   padding: 2rem;
-  width: 50%;
+  width: 70%;
   margin: auto;
   overflow: hidden;
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .home .container {
     width: 80%;
   }
@@ -70,6 +70,13 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 100%;
+}
+
+@media screen and (max-width: 580px) {
+  .home .container img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .home .container p {
@@ -236,8 +243,19 @@ nav .container ul a:hover {
 .aboutme {
   height: 100vh;
   width: 100%;
+}
+
+.aboutme .container {
+  width: 80%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+  .aboutme .container {
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -284,7 +302,7 @@ nav .container ul a:hover {
 
 @media screen and (max-width: 580px) {
   .aboutme__leftContainer .aboutme__text p {
-    font-size: 1rem;
+    font-size: small;
   }
 }
 
@@ -292,13 +310,13 @@ nav .container ul a:hover {
   margin: 3rem 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 580px) {
   .aboutme__leftContainer .aboutme__skills {
     text-align: center;
   }
 }
 
-.aboutme__leftContainer .aboutme__skills h2 {
+.aboutme__leftContainer .aboutme__skills h4 {
   font-family: "Noto Serif", serif;
   font-style: italic;
   font-size: 2rem;
@@ -307,20 +325,17 @@ nav .container ul a:hover {
 }
 
 @media screen and (max-width: 580px) {
-  .aboutme__leftContainer .aboutme__skills h2 {
+  .aboutme__leftContainer .aboutme__skills h4 {
     font-size: 1.5rem;
   }
 }
 
-.aboutme__leftContainer .aboutme__skills > *:not(h2) {
+.aboutme__leftContainer .aboutme__skills img {
   margin: 1rem 1rem 0 0;
-  width: 70px;
-  fill: #233047;
 }
 
 .aboutme__rightContainer {
   flex: 1;
-  background: #121925;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,14 +343,12 @@ nav .container ul a:hover {
 
 .aboutme__rightContainer img {
   width: 70%;
-  height: 60%;
-  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 10px 30px rgba(18, 25, 37, 0.275);
 }
 
 @media screen and (max-width: 900px) {
   .aboutme__rightContainer img {
-    width: 30%;
-    height: 70%;
+    width: 40%;
   }
 }
 
@@ -354,6 +367,12 @@ nav .container ul a:hover {
   color: #121925;
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+  .education h1 {
+    font-size: 1.5rem;
+  }
 }
 
 .education .container {
@@ -418,6 +437,12 @@ nav .container ul a:hover {
   margin-bottom: 0.7rem;
 }
 
+@media screen and (max-width: 580px) {
+  .step .content .content__heading h2 {
+    font-size: 1rem;
+  }
+}
+
 .step .content .content__heading p {
   color: rgba(0, 0, 0, 0.6);
   font-family: "Raleway", sans-serif;
@@ -437,6 +462,12 @@ nav .container ul a:hover {
   color: #121925;
   font-style: italic;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+  .projects h1 {
+    font-size: 1.5rem;
+  }
 }
 
 .projects .container {

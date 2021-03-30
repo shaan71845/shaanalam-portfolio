@@ -1,8 +1,17 @@
 .aboutme {
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include large {
+      flex-direction: column-reverse;
+    }
+  }
 
   @include large {
     height: auto;
@@ -17,6 +26,7 @@
     // About me paragraph
     .aboutme__text {
       margin-top: 2rem;
+
       @include large {
         text-align: center;
       }
@@ -39,7 +49,7 @@
         font-family: $font-raleway;
 
         @include small {
-          font-size: 1rem;
+          font-size: small;
         }
       }
     }
@@ -47,11 +57,12 @@
     // Skills section
     .aboutme__skills {
       margin: 3rem 0;
-      @include large {
+
+      @include small {
         text-align: center;
       }
 
-      h2 {
+      h4 {
         font-family: $font-noto;
         font-style: italic;
         font-size: 2rem;
@@ -63,10 +74,8 @@
         }
       }
 
-      & > *:not(h2) {
+      img {
         margin: 1rem 1rem 0 0;
-        width: 70px;
-        fill: lighten($primary-color, 10%);
       }
     }
   }
@@ -74,19 +83,16 @@
   // Right Container
   &__rightContainer {
     flex: 1;
-    background: $primary-color;
     display: flex;
     justify-content: center;
     align-items: center;
 
     img {
       width: 70%;
-      height: 60%;
-      box-shadow: 0 2px 50px rgba(0, 0, 0, 0.1);
+      box-shadow: 5px 10px 30px rgba($primary-color, 0.275);
 
       @include large {
-        width: 30%;
-        height: 70%;
+        width: 40%;
       }
     }
   }

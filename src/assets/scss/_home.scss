@@ -8,12 +8,13 @@
 
   .container {
     padding: 2rem;
-    width: 50%;
+    width: 70%;
     margin: auto;
     overflow: hidden;
     text-align: center;
 
-    @include medium {
+    
+    @include large {
       width: 80%;
     }
 
@@ -28,6 +29,11 @@
       height: 200px;
       width: 200px;
       border-radius: 100%;
+
+      @include small {
+        width: 120px;
+        height: 120px;
+      }
     }
 
     p {
