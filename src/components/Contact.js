@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import emailjs, { init } from "emailjs-com";
 import Fade from "react-reveal/Fade";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ const Contact = () => {
         setSubject("");
         setMessage("");
 
-        setSuccessMsg("✅️ Your email has been successfully sent!");
+        setSuccessMsg("Your email has been successfully sent!");
 
         // Clear the success msg after 3 seconds
         setTimeout(() => {
@@ -37,7 +39,7 @@ const Contact = () => {
         }, 3000);
       })
       .catch(() => {
-        setSuccessMsg("❌️ Something went wrong!");
+        setErrorMsg("Something went wrong!");
 
         // Clear the error msg after 3 seconds
         setTimeout(() => {
@@ -48,8 +50,17 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contactme">
-      {successMsg && <div className="success__msg">{successMsg}</div>}
-      {errorMsg && <div className="error__msg">{errorMsg}</div>}
+      {successMsg && (
+        <div className="success__msg">
+          <CheckCircleIcon /> {successMsg}
+        </div>
+      )}
+      {errorMsg && (
+        <div className="error__msg">
+          <CancelIcon />
+          {errorMsg}
+        </div>
+      )}
       <div className="contact__container">
         <div className="contact__containerHeading">
           <Fade>

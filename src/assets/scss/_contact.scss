@@ -23,6 +23,11 @@
     border-radius: 5px;
     box-shadow: 0 4px 5px rgba($primary-color, 0.23);
     animation: fadeIn 0.4s;
+
+    // The material ui svg icon
+    svg {
+      vertical-align: middle;
+    }
   }
 
   @keyframes fadeIn {
@@ -126,7 +131,7 @@
     input:not(:valid):focus,
     textarea:not(:valid):focus {
       outline: none;
-      box-shadow: none
+      box-shadow: none;
     }
 
     input:focus + label {

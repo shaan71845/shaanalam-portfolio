@@ -780,6 +780,11 @@ nav .container ul a:hover {
   animation: fadeIn 0.4s;
 }
 
+.contact .success__msg svg,
+.contact .error__msg svg {
+  vertical-align: middle;
+}
+
 @keyframes fadeIn {
   0% {
     bottom: 0;
