@@ -16,7 +16,7 @@ const AboutMe = () => {
             </Fade>
             <Fade left>
               <>
-                {state && (
+                {state && state.author !== undefined && (
                   <BlockContent
                     blocks={state?.author.about}
                     projectId="izpqy9cv"
