@@ -60,16 +60,22 @@
       background: linear-gradient(
         to bottom right,
         $primary-color,
-        lighten($primary-color, 20%)
+        darken($primary-color, 20%)
       );
       color: #fff;
       font-family: $font-raleway;
       opacity: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 1;
       transition: all 0.4s;
+
+      a {
+        color: #fff;
+        margin-top: 1rem;
+      }
     }
 
     // Show .project__details on hover

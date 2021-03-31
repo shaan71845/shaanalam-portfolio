@@ -5,10 +5,11 @@ import Fade from "react-reveal/Fade";
 
 const ProjectItem = ({ project }) => {
   return (
-    <Link to={`/project/${project.slug.current}`}>
+    <Fade bottom>
       <div className="project">
         <div className="project__details">
           <h3 className="project__title">{project.title}</h3>
+          <Link to={`/project/${project.slug.current}`}>View</Link>
         </div>
         <Img
           src={project.mainImage.asset.url}
@@ -16,7 +17,7 @@ const ProjectItem = ({ project }) => {
           loader={<LinearProgress />}
         />
       </div>
-    </Link>
+    </Fade>
   );
 };
 
