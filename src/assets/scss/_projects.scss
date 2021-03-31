@@ -24,20 +24,30 @@
   }
 
   .projects__grid {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-gap: 1rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    & > div {
+      flex: 0 1 1;
+    }
   }
 
   .project {
+    margin: 0.5rem;
+    width: 300px;
+    height: 300px;
     position: relative;
     transition: all 0.4s;
 
     // Project sample image
     img {
+      height: 100%;
       width: 100%;
       position: relative;
+      object-fit: cover;
     }
 
     // Project details on hover

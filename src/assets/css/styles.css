@@ -70,6 +70,7 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 580px) {
@@ -326,6 +327,7 @@ nav .container ul a:hover {
 }
 
 .aboutme__rightContainer img {
+  object-fit: cover;
   width: 70%;
   box-shadow: 5px 10px 30px rgba(18, 25, 37, 0.275);
 }
@@ -336,8 +338,20 @@ nav .container ul a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .aboutme__rightContainer img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .aboutme__rightContainer img {
+    width: 60%;
+  }
+}
+
 .education {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -461,20 +475,30 @@ nav .container ul a:hover {
 }
 
 .projects .projects__grid {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  grid-gap: 1rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.projects .projects__grid > div {
+  flex: 0 1 1;
 }
 
 .projects .project {
+  margin: 0.5rem;
+  width: 300px;
+  height: 300px;
   position: relative;
   transition: all 0.4s;
 }
 
 .projects .project img {
+  height: 100%;
   width: 100%;
   position: relative;
+  object-fit: cover;
 }
 
 .projects .project .project__details {
@@ -512,6 +536,12 @@ nav .container ul a:hover {
   margin: auto;
   overflow: hidden;
   padding: 4rem 0;
+}
+
+@media screen and (max-width: 580px) {
+  .project__page .container {
+    width: 90%;
+  }
 }
 
 .project__page .back__btn {
@@ -552,8 +582,9 @@ nav .container ul a:hover {
   position: relative;
   z-index: 2;
   background: #fff;
-  box-shadow: 2px 4px 10px rgba(18, 25, 37, 0.32);
+  box-shadow: 2px 4px 40px rgba(18, 25, 37, 0.112);
   padding: 2rem 4rem;
+  border-radius: 6px;
 }
 
 .project__page .project__details h1 {
@@ -658,13 +689,12 @@ nav .container ul a:hover {
 }
 
 .blog__posts {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
 }
 
 .blog__posts .container {
-  padding: 3rem 0rem;
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -755,7 +785,7 @@ nav .container ul a:hover {
 
 .contact {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   text-align: center;
   display: flex;
   flex-direction: column;

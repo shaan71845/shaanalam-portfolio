@@ -7,6 +7,10 @@
     margin: auto;
     overflow: hidden;
     padding: 4rem 0;
+
+    @include small {
+      width: 90%;
+    }
   }
 
   .back__btn {
@@ -47,8 +51,9 @@
     position: relative;
     z-index: 2;
     background: #fff;
-    box-shadow: 2px 4px 10px rgba($primary-color, 0.32);
+    box-shadow: 2px 4px 40px rgba($primary-color, 0.112);
     padding: 2rem 4rem;
+    border-radius: 6px;
 
     h1 {
       font-family: $font-noto;

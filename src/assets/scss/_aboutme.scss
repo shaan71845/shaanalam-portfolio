@@ -88,11 +88,20 @@
     align-items: center;
 
     img {
+      object-fit: cover;
       width: 70%;
       box-shadow: 5px 10px 30px rgba($primary-color, 0.275);
 
       @include large {
         width: 40%;
+      }
+
+      @include medium {
+        width: 50%;
+      }
+
+      @include small {
+        width: 60%;
       }
     }
   }
