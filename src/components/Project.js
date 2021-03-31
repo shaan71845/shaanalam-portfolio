@@ -36,7 +36,6 @@ const Project = () => {
       )
       .then((data) => {
         setProject(data[0]);
-        console.log(data[0]);
       })
       .catch((err) => console.log(err));
   }, [slug]);
