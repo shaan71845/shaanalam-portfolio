@@ -28,6 +28,7 @@
     justify-items: center;
     grid-gap: 1rem;
     margin: 3rem 0;
+    padding: 0 1rem;
 
     @include medium {
       grid-gap: 1.5rem;
@@ -42,13 +43,13 @@
   .blog {
     transition: all 0.4s;
     border-radius: 8px;
-    box-shadow: 5px 10px 30px rgba($primary-color, 0.175);
+    box-shadow: 5px 5px 30px rgba($primary-color, 0.0915);
     max-width: 400px;
 
     // On blog hover
     &:hover {
-      transform: scale(1.091);
-      box-shadow: 5px 10px 50px rgba($primary-color, 0.275);
+      transform: scale(1.1);
+      box-shadow: 5px 5px 40px rgba($primary-color, 0.10);
     }
 
     // Blog cover image div
@@ -64,9 +65,14 @@
     // Blog description
     .blog__description {
       padding: 0.2rem 1.5rem;
+
       h4 {
         color: $primary-color;
         font-family: $font-raleway;
+
+        @include small {
+          font-size: small;
+        }
       }
     }
     // Blog description user details

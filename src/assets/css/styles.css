@@ -682,6 +682,7 @@ nav .container ul a:hover {
   justify-items: center;
   grid-gap: 1rem;
   margin: 3rem 0;
+  padding: 0 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -697,13 +698,13 @@ nav .container ul a:hover {
 .blog__posts .blog {
   transition: all 0.4s;
   border-radius: 8px;
-  box-shadow: 5px 10px 30px rgba(18, 25, 37, 0.175);
+  box-shadow: 5px 5px 30px rgba(18, 25, 37, 0.0915);
   max-width: 400px;
 }
 
 .blog__posts .blog:hover {
-  transform: scale(1.091);
-  box-shadow: 5px 10px 50px rgba(18, 25, 37, 0.275);
+  transform: scale(1.1);
+  box-shadow: 5px 5px 40px rgba(18, 25, 37, 0.1);
 }
 
 .blog__posts .blog .blog__coverImg {
@@ -721,6 +722,12 @@ nav .container ul a:hover {
 .blog__posts .blog .blog__description h4 {
   color: #121925;
   font-family: "Raleway", sans-serif;
+}
+
+@media screen and (max-width: 580px) {
+  .blog__posts .blog .blog__description h4 {
+    font-size: small;
+  }
 }
 
 .blog__posts .blog .blog__desctiption__userDetails {
@@ -884,5 +891,37 @@ nav .container ul a:hover {
 .contact__container form .form__field input:valid + label {
   top: 0;
   font-size: x-small;
+}
+
+footer {
+  background: #121925;
+  font-family: "Raleway", sans-serif;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+footer .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+footer h2 {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #eee;
+  margin-right: 12px;
+  transition: all 0.4s;
+}
+
+footer a:visited {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

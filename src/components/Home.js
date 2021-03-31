@@ -4,6 +4,7 @@ import Education from "./Education";
 import Projects from "./Projects";
 import BlogPosts from "./BlogPosts";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Projects />
       <BlogPosts />
       <Contact />
+      <Footer />
     </>
   );
 };
