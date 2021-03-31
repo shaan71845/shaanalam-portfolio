@@ -1,10 +1,14 @@
 footer {
   background: $primary-color;
   font-family: $font-raleway;
-  padding: 1rem 2rem;
   color: #fff;
 
+  @include small {
+    text-align: center;
+  }
+
   .container {
+    padding: 1rem 2rem;
     width: 80%;
     margin: auto;
     overflow: hidden;
@@ -13,6 +17,10 @@ footer {
   h2 {
     font-weight: normal;
     margin-bottom: 1rem;
+
+    @include small {
+      font-size: 1.2rem;
+    }
   }
 
   a {
@@ -28,4 +36,12 @@ footer {
       color: #fff;
     }
   }
+}
+
+.mark {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background: darken($primary-color, 5%);
+  margin: 1rem 0 0 0;
 }

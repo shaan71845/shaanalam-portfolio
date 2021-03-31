@@ -899,11 +899,17 @@ nav .container ul a:hover {
 footer {
   background: #121925;
   font-family: "Raleway", sans-serif;
-  padding: 1rem 2rem;
   color: #fff;
 }
 
+@media screen and (max-width: 580px) {
+  footer {
+    text-align: center;
+  }
+}
+
 footer .container {
+  padding: 1rem 2rem;
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -912,6 +918,12 @@ footer .container {
 footer h2 {
   font-weight: normal;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 580px) {
+  footer h2 {
+    font-size: 1.2rem;
+  }
 }
 
 footer a {
@@ -926,5 +938,13 @@ footer a:visited {
 
 footer a:hover {
   color: #fff;
+}
+
+.mark {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background: #0a0d14;
+  margin: 1rem 0 0 0;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -8,18 +8,38 @@ const Footer = () => {
     <footer>
       <div className="container">
         <h2>Connect with me on</h2>
-        <a href="https://www.instagram.com/__shaanalam__/">
+        <a
+          href="https://www.instagram.com/__shaanalam__/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <InstagramIcon />
         </a>
-        <a href="">
+        <a
+          href="https://www.linkedin.com/in/shaan-alam-01784018a/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <LinkedInIcon />
         </a>
-        <a href="">
+        <a
+          href="https://twitter.com/shaancodes"
+          target="_blank"
+          rel="noreferrer"
+        >
           <TwitterIcon />
         </a>
-        <a href="https://github.com/shaan71845">
+        <a
+          href="https://github.com/shaan71845"
+          target="_blank"
+          rel="noreferrer"
+        >
           <GitHubIcon />
         </a>
+      </div>
+
+      <div className="mark">
+        <p>Made with ❤️ by Shaan Alam</p>
       </div>
     </footer>
   );
