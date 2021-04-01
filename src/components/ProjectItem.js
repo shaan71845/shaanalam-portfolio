@@ -3,6 +3,7 @@ import { Img } from "react-image";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Fade from "react-reveal/Fade";
 import LinkIcon from "@material-ui/icons/Link";
+import VisibilityIcon from "@material-ui/icons/Visibility";
 
 const ProjectItem = ({ project }) => {
   return (
@@ -21,7 +22,7 @@ const ProjectItem = ({ project }) => {
             <LinkIcon /> Live Demo
           </a>
           <Link to={`/project/${project.slug.current}`}>
-            <LinkIcon /> View
+            <VisibilityIcon /> View
           </Link>
         </div>
       </div>
