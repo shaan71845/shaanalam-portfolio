@@ -15,23 +15,43 @@ const Navbar = () => {
           <div></div>
         </div>
         <ul className={`${navOpen ? "visible" : ""}`}>
-          <li onClick={() => setNavOpen(false)}>
-            <Link to="home" smooth={true} duration={1000}>
+          <li>
+            <Link
+              to="home"
+              smooth={true}
+              duration={1000}
+              onClick={() => setNavOpen(false)}
+            >
               Home
             </Link>
           </li>
-          <li onClick={() => setNavOpen(false)}>
-            <Link to="about-me" smooth={true} duration={1000}>
+          <li>
+            <Link
+              to="about-me"
+              smooth={true}
+              duration={1000}
+              onClick={() => setNavOpen(false)}
+            >
               About me
             </Link>
           </li>
-          <li onClick={() => setNavOpen(false)}>
-            <Link to="projects" smooth={true} duration={1000}>
+          <li>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={1000}
+              onClick={() => setNavOpen(false)}
+            >
               Projects
             </Link>
           </li>
-          <li onClick={() => setNavOpen(false)}>
-            <Link to="contactme" smooth={true} duration={1000}>
+          <li>
+            <Link
+              to="contactme"
+              smooth={true}
+              duration={1000}
+              onClick={() => setNavOpen(false)}
+            >
               Contact me
             </Link>
           </li>

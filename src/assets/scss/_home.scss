@@ -16,17 +16,24 @@
 
   // Social icons
   .social-icons {
-    margin-top: 5rem;
+    margin-top: -2rem;
     display: flex;
+    justify-content: space-between;
+    width: 25%;
+    text-align: center;
 
-    @include medium {
-      text-align: center;
+
+    @include large {
+      width: 50%;
+    }
+
+    @include small {
+      width: 100%;
+      justify-content: space-around;
     }
 
     a {
       color: gray;
-      margin-right: 40px;
-      margin-left: 5px;
       transition: all 0.4s;
 
       svg {
@@ -89,13 +96,14 @@
       @include small {
         text-align: center;
         width: 100%;
+        font-size: small;
       }
     }
   }
 
   // CTA section
   .hero__actions {
-    margin-top: 2rem;
+    margin-top: 4rem;
 
     @include small {
       display: flex !important;

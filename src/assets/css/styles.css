@@ -69,20 +69,28 @@ body {
 }
 
 .hero__section .social-icons {
-  margin-top: 5rem;
+  margin-top: -2rem;
   display: flex;
+  justify-content: space-between;
+  width: 25%;
+  text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .hero__section .social-icons {
-    text-align: center;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero__section .social-icons {
+    width: 100%;
+    justify-content: space-around;
   }
 }
 
 .hero__section .social-icons a {
   color: gray;
-  margin-right: 40px;
-  margin-left: 5px;
   transition: all 0.4s;
 }
 
@@ -158,11 +166,12 @@ body {
   .hero__section header p {
     text-align: center;
     width: 100%;
+    font-size: small;
   }
 }
 
 .hero__section .hero__actions {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 @media screen and (max-width: 580px) {
