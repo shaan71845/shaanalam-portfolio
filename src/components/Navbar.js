@@ -14,18 +14,18 @@ const Navbar = () => {
           <div></div>
         </div>
         <ul className={`${navOpen ? "visible" : ""}`}>
-          <li>
+          <li onClick={() => setNavOpen(false)}>
             <a href="#home" className="active">
               Home
             </a>
           </li>
-          <li>
+          <li onClick={() => setNavOpen(false)}>
             <a href="#about-me">About me</a>
           </li>
-          <li>
+          <li onClick={() => setNavOpen(false)}>
             <a href="#projects">Projects</a>
           </li>
-          <li>
+          <li onClick={() => setNavOpen(false)}>
             <a href="#contactme">Contact me</a>
           </li>
         </ul>
