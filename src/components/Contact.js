@@ -65,7 +65,7 @@ const Contact = () => {
       <div className="contact__container">
         <div className="contact__containerHeading">
           <Fade>
-            <h2>Wanna work togther??</h2>
+            <h2>Want to work togther??</h2>
           </Fade>
           <Fade>
             <p>Contact me...</p>
