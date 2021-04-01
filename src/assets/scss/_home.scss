@@ -23,7 +23,6 @@
     width: 25%;
     text-align: center;
 
-
     @include large {
       width: 50%;
     }
@@ -69,9 +68,15 @@
     }
 
     h1 {
-      color: $primary-color;
       font-family: $font-noto;
       font-size: 3.5rem;
+      background: linear-gradient(
+        to bottom right,
+        lighten($primary-color, 25%),
+        darken($primary-color, 80%)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 
       @include small {
         text-align: center;

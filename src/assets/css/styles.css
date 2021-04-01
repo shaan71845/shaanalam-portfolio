@@ -37,7 +37,7 @@ body {
   width: 0%;
   z-index: -1;
   transition: all 0.4s;
-  background: #151e2c;
+  background: linear-gradient(to bottom right, #364d71, black);
 }
 
 .btn__primary:hover {
@@ -131,9 +131,11 @@ body {
 }
 
 .hero__section header h1 {
-  color: #151e2c;
   font-family: "Noto Serif", serif;
   font-size: 3.5rem;
+  background: linear-gradient(to bottom right, #3e5982, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 580px) {

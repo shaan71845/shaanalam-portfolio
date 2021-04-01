@@ -20,7 +20,11 @@
     width: 0%;
     z-index: -1;
     transition: all 0.4s;
-    background: $primary-color;
+    background: linear-gradient(
+      to bottom right,
+      lighten($primary-color, 20%),
+      darken($primary-color, 40%)
+    );
   }
 
   &:hover {
