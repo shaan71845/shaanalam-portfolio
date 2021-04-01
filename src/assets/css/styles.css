@@ -65,12 +65,44 @@ body {
 
 .hero__section .container {
   width: 80%;
-  margin: -3rem auto 0 auto;
+  margin: 0 auto 0 auto;
   overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.hero__section .social-icons {
+  margin-top: 5rem;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__section .social-icons {
+    text-align: center;
+  }
+}
+
+.hero__section .social-icons a {
+  color: gray;
+  margin-right: 20px;
+  margin-left: 5px;
+  transition: all 0.4s;
+}
+
+.hero__section .social-icons a svg {
+  transform: scale(1.4);
+}
+
+.hero__section .social-icons a:hover {
+  color: #151e2c;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__section .social-icons a {
+    width: 100%;
+  }
 }
 
 .hero__section header {
