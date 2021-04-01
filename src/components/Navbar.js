@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
