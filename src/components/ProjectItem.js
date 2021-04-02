@@ -14,7 +14,7 @@ const ProjectItem = ({ project }) => {
           alt={project.title}
           loader={<LinearProgress />}
         />
-        <div className="project__details">w
+        <div className="project__details">
           <h4 className="project__title">{project.title}</h4>
         </div>
         <div className="project__links">
