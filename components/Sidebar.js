@@ -10,31 +10,29 @@ const Sidebar = () => {
   return (
     <>
       <MenuIcon color="#FFF" onClick={() => setSidebar(true)} />
-      {sidebar && (
-        <SidebarWrapper className={`${sidebar ? "active" : ""}`}>
-          <SidebarClose color="#FFF" onClick={() => setSidebar(false)} />
-          <SidebarMenu>
-            <Link href="/">
-              <SidebarMenuItem>Home</SidebarMenuItem>
-            </Link>
-            <Link href="/projects">
-              <SidebarMenuItem>Projects</SidebarMenuItem>
-            </Link>
-            <Link href="/blogs">
-              <SidebarMenuItem>Blog Posts</SidebarMenuItem>
-            </Link>
-            <Link href="/">
-              <SidebarMenuItem>About</SidebarMenuItem>
-            </Link>
-            <Link href="/">
-              <SidebarMenuItem>Portfolio</SidebarMenuItem>
-            </Link>
-            <Link href="/">
-              <SidebarMenuItem>Contact</SidebarMenuItem>
-            </Link>
-          </SidebarMenu>
-        </SidebarWrapper>
-      )}
+      <SidebarWrapper className={`${sidebar ? "active" : ""}`}>
+        <SidebarClose color="#FFF" onClick={() => setSidebar(false)} />
+        <SidebarMenu>
+          <Link href="/">
+            <SidebarMenuItem>Home</SidebarMenuItem>
+          </Link>
+          <Link href="/projects">
+            <SidebarMenuItem>Projects</SidebarMenuItem>
+          </Link>
+          <Link href="/blogs">
+            <SidebarMenuItem>Blog Posts</SidebarMenuItem>
+          </Link>
+          <Link href="/about">
+            <SidebarMenuItem>About</SidebarMenuItem>
+          </Link>
+          <Link href="/">
+            <SidebarMenuItem>Portfolio</SidebarMenuItem>
+          </Link>
+          <Link href="/">
+            <SidebarMenuItem>Contact</SidebarMenuItem>
+          </Link>
+        </SidebarMenu>
+      </SidebarWrapper>
     </>
   );
 };
@@ -53,9 +51,9 @@ const SidebarWrapper = styled.div`
   text-align: center;
   padding: 3rem 0;
   z-index: 100;
+  transition: all 0.5s ease-in-out;
 
   &.active {
-    transition: all 0.5s ease-in-out;
     left: 0%;
     opacity: 0.98;
   }

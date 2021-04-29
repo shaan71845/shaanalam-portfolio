@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { devices } from "../utils/utils";
 
 const Post = ({ post }) => {
   return (
@@ -102,5 +103,9 @@ const PostDescription = styled.div`
     color: #aaa;
     line-height: 1.6;
     font-family: "Raleway", sans-serif;
+
+    @media ${devices.mobileL} {
+      font-size: small;
+    }
   }
 `;

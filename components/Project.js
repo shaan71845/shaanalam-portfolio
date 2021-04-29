@@ -74,7 +74,7 @@ const ProjectDescription = styled.div`
   }
 
   h4 {
-    margin: 10px 0;
+    margin: 20px 0;
     font-weight: normal;
     font-family: "Josefin Sans", sans-serif;
     color: #fff;
