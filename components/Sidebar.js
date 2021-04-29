@@ -17,8 +17,11 @@ const Sidebar = () => {
             <Link href="/">
               <SidebarMenuItem>Home</SidebarMenuItem>
             </Link>
-            <Link href="/">
+            <Link href="/projects">
               <SidebarMenuItem>Projects</SidebarMenuItem>
+            </Link>
+            <Link href="/blogs">
+              <SidebarMenuItem>Blog Posts</SidebarMenuItem>
             </Link>
             <Link href="/">
               <SidebarMenuItem>About</SidebarMenuItem>
@@ -29,6 +32,7 @@ const Sidebar = () => {
             <Link href="/">
               <SidebarMenuItem>Contact</SidebarMenuItem>
             </Link>
+            
           </SidebarMenu>
         </SidebarWrapper>
       )}
@@ -49,6 +53,7 @@ const SidebarWrapper = styled.div`
   width: 20%;
   text-align: center;
   padding: 3rem 0;
+  z-index: 100;
 
   &.active {
     transition: all 0.5s ease-in-out;
@@ -103,6 +108,5 @@ const SidebarMenuItem = styled.li`
 const MenuIcon = styled(Menu)`
   position: fixed;
   top: 5%;
-  left: 6rem;
   cursor: pointer;
 `;
