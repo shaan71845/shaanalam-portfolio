@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body {
+    background: #030303;
+  }
+
   ::-webkit-scrollbar {
     width: 7px;
   }

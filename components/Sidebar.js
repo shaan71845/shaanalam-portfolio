@@ -32,7 +32,6 @@ const Sidebar = () => {
             <Link href="/">
               <SidebarMenuItem>Contact</SidebarMenuItem>
             </Link>
-            
           </SidebarMenu>
         </SidebarWrapper>
       )}
@@ -101,7 +100,7 @@ const SidebarMenuItem = styled.li`
 
   :hover {
     background: #111;
-    border-bottom-color: gray;
+    border-color: gray;
   }
 `;
 

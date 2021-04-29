@@ -61,7 +61,7 @@ const HomeSection = styled.section`
     padding: 10rem 6rem;
 
     @media ${devices.tablet} {
-      padding: 10rem 0;
+      padding: 10rem 2rem;
     }
 
     h3,

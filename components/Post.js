@@ -41,6 +41,7 @@ const PostCoverImg = styled.div`
 
   img {
     width: 100%;
+    object-fit: contain;
   }
 
   ::before {
@@ -80,6 +81,7 @@ const PostUser = styled.div`
   align-items: center;
 
   img {
+    object-fit: contain;
     height: 20px;
     width: 20px;
     border-radius: 100%;

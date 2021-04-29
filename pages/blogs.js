@@ -21,13 +21,12 @@ const Blogs = ({ posts }) => {
 export default Blogs;
 
 const BlogSection = styled.section`
-  height: 100vh;
   width: 100%;
   background: #030303;
 `;
 
 const Container = styled.div`
-  padding: 6rem 0;
+  padding: 8rem 0;
   width: 80%;
   margin: auto;
 

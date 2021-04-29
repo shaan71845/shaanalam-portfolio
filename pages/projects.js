@@ -23,7 +23,7 @@ const Projects = () => {
 export default Projects;
 
 const ProjectSection = styled.section`
-  height: autoh;
+  height: auto;
   width: 100%;
   background: #030303;
 `;
