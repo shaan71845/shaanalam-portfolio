@@ -8,9 +8,11 @@ import {
 import { devices } from "../utils/utils";
 import Sidebar from "../components/Sidebar";
 
+
 const Home = () => {
   return (
     <HomeSection>
+
       <Col>
         <Sidebar />
         <h3>Hi there, I'm</h3>

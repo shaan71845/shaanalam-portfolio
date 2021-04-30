@@ -4,7 +4,6 @@ import { devices } from "../utils/utils";
 export const HomeSection = styled.section`
   min-height: 100vh;
   width: 100%;
-  background: #030303;
   display: flex;
 
   > div:nth-child(1) {

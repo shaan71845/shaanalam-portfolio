@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ProjectSection = styled.section`
   height: auto;
   width: 100%;
-  background: #030303;
 `;
 
 export const Container = styled.div`

@@ -20,7 +20,6 @@ import {
   LogoFigma,
   LogoGithub,
 } from "react-ionicons";
-import { devices } from "../utils/utils";
 
 const about = () => {
   return (

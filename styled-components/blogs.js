@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BlogSection = styled.section`
   width: 100%;
-  background: #030303;
 `;
 
 export const Container = styled.div`
