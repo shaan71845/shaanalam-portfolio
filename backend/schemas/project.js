@@ -1,11 +1,21 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'live_link',
+      title: 'Live Link',
+      type: 'string',
+    },
+    {
+      name: 'github_link',
+      title: 'GitHub Repo Link',
       type: 'string',
     },
     {
