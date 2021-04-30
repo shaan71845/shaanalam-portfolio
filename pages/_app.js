@@ -1,16 +1,29 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 import Particles from "react-particles-js";
+import { devices } from "../utils/utils";
 
-const particlesStyles = {
-  position: "fixed",
-  top: "0%",
-  left: "0%",
-  minHeight: "100vh",
-  width: "100%",
-  zIndex: -1,
-  background: "#030303",
-};
+const ParticlesContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  width: 100%;
+  z-index: -11;
+  background: #030303;
+
+  #tsparticles {
+    width: 100%;
+    min-height: 100vh;
+
+    canvas {
+      min-height: 100vh;
+      width: 100%;
+    }
+  }
+`;
 
 const GlobalStyle = createGlobalStyle`
  * {
@@ -20,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    /* background: #030303; */
+   
   }
 
   ::-webkit-scrollbar {
@@ -53,62 +66,37 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <GlobalStyle />
-      <div style={particlesStyles}>
+      <ParticlesContainer>
         <Particles
-          style={particlesStyles}
           params={{
             particles: {
               number: {
-                value: 160,
-                density: {
-                  enable: false,
-                },
+                value: 50,
               },
               size: {
                 value: 3,
                 random: true,
                 anim: {
-                  speed: 4,
-                  size_min: 0.3,
-                },
-              },
-              line_linked: {
-                enable: false,
-              },
-              move: {
-                random: true,
-                speed: 1,
-                direction: "top",
-                out_mode: "out",
-              },
-            },
-            interactivity: {
-              events: {
-                onhover: {
                   enable: true,
-                  mode: "bubble",
-                },
-                onclick: {
-                  enable: true,
-                  mode: "repulse",
+                  speed: 40,
+                  size_min: 0.1,
+                  sync: false,
                 },
               },
-              modes: {
-                bubble: {
-                  distance: 250,
-                  duration: 2,
-                  size: 0,
-                  opacity: 0,
-                },
-                repulse: {
-                  distance: 400,
-                  duration: 4,
+              opacity: {
+                value: 0.5,
+                random: false,
+                anim: {
+                  enable: true,
+                  speed: 1,
+                  opacity_min: 0.1,
+                  sync: false,
                 },
               },
             },
           }}
         />
-      </div>
+      </ParticlesContainer>
       <Component {...pageProps} />
     </>
   );
