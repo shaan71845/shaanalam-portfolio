@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-   
+   background: rgba(0, 0, 0, 0.7);
   }
 
   ::-webkit-scrollbar {
