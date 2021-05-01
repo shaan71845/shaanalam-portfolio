@@ -1,18 +1,19 @@
 import { EducationContainer } from "../styled-components/education";
 
-const Education = () => {
+const Education = ({ education }) => {
+  console.log(education);
   return (
     <EducationContainer>
       <h1>My Education</h1>
-      <div className="education">
-        <h3>BSc Physical Science with Computer Science</h3>
-        <p>Shivaji College, University Of Delhi</p>
-        <p>2020 - PRESENT</p>
-      </div>
-      <div className="education">
-        <h3>St. Basil's School</h3>
-        <p>2004 - 2020</p>
-      </div>
+      {education.map((education) => (
+        <div className="education" key={education.starting_year}>
+          <h3>{education.course}</h3>
+          <p>{education.institution}</p>
+          <p>
+            {education.starting_year} - {education.ending_year}
+          </p>
+        </div>
+      ))}
     </EducationContainer>
   );
 };

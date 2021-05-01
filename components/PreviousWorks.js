@@ -1,14 +1,18 @@
 import { PWContainer } from "../styled-components/previous-works";
 
-const PreviousWorks = () => {
+const PreviousWorks = ({ experiences }) => {
   return (
     <PWContainer>
       <h1>My Previous Experiences</h1>
-      <div className="experience">
-        <h3>Astorianz Pvt Lmt.</h3>
-        <p>Role - Front End Developer</p>
-        <p>27 April, 2021 - PRESENT</p>
-      </div>
+      {experiences.map((experience) => (
+        <div className="experience" key={experience.title}>
+          <h3>{experience.title}</h3>
+          <p>Role - {experience.role}</p>
+          <p>
+            {experiences.starting_date} - {experience.ending_date}
+          </p>
+        </div>
+      ))}
     </PWContainer>
   );
 };

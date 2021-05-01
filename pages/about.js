@@ -7,7 +7,8 @@ import Skills from "../components/Skills";
 import PreviousWorks from "../components/PreviousWorks";
 import { motion } from "framer-motion";
 
-const about = ({ about }) => {
+const about = ({ about, experiences, education }) => {
+  console.log(experiences);
   return (
     <Section>
       <Container>
@@ -43,9 +44,9 @@ const about = ({ about }) => {
             />
           </Col>
         </Grid>
-        <Education />
+        <Education education={education} />
         <Skills />
-        <PreviousWorks />
+        <PreviousWorks experiences={experiences} />
       </Container>
     </Section>
   );
@@ -64,9 +65,29 @@ export async function getStaticProps() {
     }
   }[0]`);
 
+  const experiences = await sanityClient.fetch(`
+    *[_type == "experiences"] {
+      title,
+      role,
+      starting_date,
+      ending_date
+    }
+  `);
+
+  const education = await sanityClient.fetch(`
+    *[_type == "education"] {
+      institution,
+      course,
+      starting_year,
+      ending_year
+    }
+  `);
+
   return {
     props: {
       about,
+      experiences,
+      education,
     },
   };
 }
