@@ -24,10 +24,7 @@ const Sidebar = () => {
           </Link>
           <Link href="/about">
             <SidebarMenuItem>About</SidebarMenuItem>
-          </Link>
-          <Link href="/">
-            <SidebarMenuItem>Portfolio</SidebarMenuItem>
-          </Link>
+          </Link>         
           <Link href="/">
             <SidebarMenuItem>Contact</SidebarMenuItem>
           </Link>
