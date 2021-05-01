@@ -23,6 +23,10 @@ export const EducationContainer = styled.div`
     h3 {
       font-family: "Josefin Sans", sans-serif;
       font-size: 1.5rem;
+
+      @media ${devices.mobileM} {
+        font-size: 1rem;
+      }
     }
 
     p {

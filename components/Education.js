@@ -1,4 +1,4 @@
-import { EducationContainer } from "../styled-components/Education";
+import { EducationContainer } from "../styled-components/education";
 
 const Education = () => {
   return (

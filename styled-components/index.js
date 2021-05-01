@@ -35,7 +35,7 @@ export const HomeSection = styled.section`
       }
 
       @media ${devices.mobileL} {
-        font-size: 100%;
+        font-size: 180%;
       }
     }
 
@@ -47,7 +47,7 @@ export const HomeSection = styled.section`
       }
 
       @media ${devices.mobileL} {
-        font-size: 150%;
+        font-size: 250%;
       }
     }
 
@@ -82,7 +82,8 @@ export const HomeSection = styled.section`
     }
 
     @media ${devices.tablet} {
-      justify-content: center;
+      display: block;
+      text-align: center;
     }
 
     img {
@@ -101,10 +102,6 @@ export const HomeSection = styled.section`
         width: 100px;
         height: 100px;
       }
-
-      /* @media ${devices.laptopL} {
-        width: 100%;
-      } */
     }
   }
 `;
