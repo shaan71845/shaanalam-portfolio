@@ -22,6 +22,7 @@ import {
 } from "react-ionicons";
 import BlockContent from "@sanity/block-content-to-react";
 import sanityClient from "../client";
+import Education from "../components/Education";
 
 const about = ({ about }) => {
   return (
@@ -44,24 +45,7 @@ const about = ({ about }) => {
             />
           </Col>
         </Grid>
-        <EducationContainer>
-          <h1>My Education</h1>
-          <ul>
-            <li>
-              <div>
-                <h4>BSc. Physical Science with Computer Science</h4>
-                <h4>Shivaji College, University Of Delhi</h4>
-                <p>2020 - PRESENT</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h4>St. Basil's School, Basti</h4>
-                <p>2004 - 2020</p>
-              </div>
-            </li>
-          </ul>
-        </EducationContainer>
+        <Education />
         <SkillsContainer>
           <h1>My Skills and tools</h1>
           <Skills>
