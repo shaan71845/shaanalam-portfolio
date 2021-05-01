@@ -111,18 +111,6 @@ export const Col = styled.div`
   flex: 1;
 `;
 
-export const SocialIcons = styled(motion.div)`
-  margin-top: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-
-  @media ${devices.tablet} {
-    width: 80%;
-    margin: 40px auto;
-  }
-`;
 
 export const Typing = styled(motion.div)`
   h2 {

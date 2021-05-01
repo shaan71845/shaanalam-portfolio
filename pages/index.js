@@ -1,20 +1,10 @@
 import { useEffect, useRef } from "react";
-import {
-  HomeSection,
-  Col,
-  SocialIcons,
-  Typing,
-} from "../styled-components/index";
-import {
-  LogoLinkedin,
-  LogoInstagram,
-  LogoGithub,
-  LogoTwitter,
-} from "react-ionicons";
+import { HomeSection, Col, Typing } from "../styled-components/index";
 import Sidebar from "../components/Sidebar";
 import sanityClient from "../client";
 import { init } from "ityped";
 import { motion } from "framer-motion";
+import SocialIconsComponent from "../components/SocialIconsComponent";
 
 const Home = ({ about }) => {
   const typingRef = useRef();
@@ -62,30 +52,13 @@ const Home = ({ about }) => {
             <span ref={typingRef}></span>
           </h2>
         </Typing>
-        <SocialIcons
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <a href="#!">
-            <LogoInstagram color="#FFF" />
-          </a>
-          <a href="#!">
-            <LogoGithub color="#FFF" />
-          </a>
-          <a href="#!">
-            <LogoLinkedin color="#FFF" />
-          </a>
-          <a href="#!">
-            <LogoTwitter color="#FFF" />
-          </a>
-        </SocialIcons>
+        <SocialIconsComponent />
       </Col>
       <Col>
         <motion.img
-           initial={{ y: -30, opacity: 0 }}
-           animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
-           transition={{ duration: 1.8 }}
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
+          transition={{ duration: 1.8 }}
           src={about.image.asset.url}
           alt={about.name}
         />
