@@ -83,9 +83,9 @@ const Home = ({ about }) => {
       </Col>
       <Col>
         <motion.img
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "tween", duration: 2 }}
+           initial={{ y: -30, opacity: 0 }}
+           animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
+           transition={{ duration: 1.8 }}
           src={about.image.asset.url}
           alt={about.name}
         />
