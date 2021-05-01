@@ -5,15 +5,17 @@ const Education = ({ education }) => {
   return (
     <EducationContainer>
       <h1>My Education</h1>
-      {education.map((education) => (
-        <div className="education" key={education.starting_year}>
-          <h3>{education.course}</h3>
-          <p>{education.institution}</p>
-          <p>
-            {education.starting_year} - {education.ending_year}
-          </p>
-        </div>
-      ))}
+      <div className="education-grid">
+        {education.map((education) => (
+          <div className="education" key={education.starting_year}>
+            <h3>{education.course}</h3>
+            <p>{education.institution}</p>
+            <p>
+              {education.starting_year} - {education.ending_year}
+            </p>
+          </div>
+        ))}
+      </div>
     </EducationContainer>
   );
 };

@@ -4,6 +4,11 @@ import { devices } from "../utils/utils";
 export const EducationContainer = styled.div`
   margin-bottom: 100px;
 
+  .education-grid {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   @media ${devices.tablet} {
     margin-top: 100px;
   }
@@ -20,8 +25,12 @@ export const EducationContainer = styled.div`
   }
 
   .education {
+    margin-right: 30px;
+    background: #222;
+    width: 500px;
+    padding: 2rem 4rem;
+    margin: 30px auto;
     text-align: center;
-    margin: 30px 0;
     color: #fff;
 
     h3 {
