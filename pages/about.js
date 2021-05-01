@@ -5,6 +5,7 @@ import sanityClient from "../client";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import PreviousWorks from "../components/PreviousWorks";
+import { motion } from "framer-motion";
 
 const about = ({ about }) => {
   return (
@@ -13,16 +14,31 @@ const about = ({ about }) => {
         <Sidebar />
         <Grid>
           <Col>
-            <h1>About me</h1>
-            <BlockContent
-              blocks={about.bio[0]}
-              projectId={process.env.PROJECT_ID}
-              dataset={process.env.DATASET}
-            />
+            <motion.h1
+              initial={{ y: -30, opacity: 0 }}
+              transition={{ duration: 1 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
+              About me
+            </motion.h1>
+            <motion.div
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.43, duration: 1 }}
+            >
+              <BlockContent
+                blocks={about.bio[0]}
+                projectId={process.env.PROJECT_ID}
+                dataset={process.env.DATASET}
+              />
+            </motion.div>
           </Col>
           <Col>
-            <img
-              src="https://shaanalam.vercel.app/images/me.png"
+            <motion.img
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
+              transition={{ duration: 1.8 }}
+              src={about.image.asset.url}
               alt="Shaan Alam"
             />
           </Col>
