@@ -7,6 +7,10 @@ export const EducationContainer = styled.div`
   .education-grid {
     display: flex;
     justify-content: flex-start;
+
+    @media ${devices.tabletL} {
+      display: block;
+    }
   }
 
   @media ${devices.tablet} {
