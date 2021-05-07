@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 export const ContactSection = styled.section`
   padding: 8rem 6rem;
+  position: relative;
 
   @media ${devices.mobileL} {
     padding: 10rem 2rem;
@@ -99,6 +100,7 @@ export const Input = styled(motion.input)`
   outline: none;
   color: #fff;
   font-family: "Raleway", sans-serif;
+  background: transparent;
 
   :focus {
     outline: none;
@@ -115,6 +117,7 @@ export const TextArea = styled(motion.textarea)`
   font-family: "Raleway", sans-serif;
 
   :focus {
+    background: transparent;
     outline: none;
   }
 `;

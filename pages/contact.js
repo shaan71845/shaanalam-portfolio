@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import {
   LogoInstagram,
   LogoGithub,
@@ -12,7 +13,9 @@ import {
   TextArea,
   Button,
 } from "../styled-components/contact";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import emailjs from "emailjs-com";
+import Alert from "../components/Alert";
 
 const formVariants = {
   hidden: { opacity: 0, y: -30 },
@@ -26,6 +29,43 @@ const formElementVariants = {
 };
 
 const Contact = () => {
+  const [alert, setAlert] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert("");
+    }, 3000);
+  }, [alert]);
+
+  const formRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    console.log(formRef.current);
+
+    emailjs
+      .sendForm(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        formRef.current,
+        process.env.USER_ID
+      )
+      .then(() => {
+        setAlert("Your email has been sent successfully!!");
+      })
+      .catch(() => {
+        setAlert("Oop...something went wrong!");
+      });
+
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    messageRef.current.value = "";
+  };
+
   return (
     <ContactSection>
       <Sidebar />
@@ -34,17 +74,38 @@ const Contact = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        Wanna work together? Contact me!!
+        Contact me!!
       </motion.h1>
       <Form
+        ref={formRef}
+        onSubmit={sendEmail}
         variants={formVariants}
         initial="hidden"
         animate="show"
         transition="transition"
       >
-        <Input placeholder="Your name" variants={formElementVariants} />
-        <Input placeholder="Your Email" variants={formElementVariants} />
-        <TextArea placeholder="Message" variants={formElementVariants} />
+        <Input
+          placeholder="Your name"
+          name="from_name"
+          variants={formElementVariants}
+          ref={nameRef}
+          required
+        />
+        <Input
+          placeholder="Your Email"
+          email="email"
+          name="email"
+          variants={formElementVariants}
+          ref={emailRef}
+          required
+        />
+        <TextArea
+          placeholder="Message"
+          name="message"
+          variants={formElementVariants}
+          ref={messageRef}
+          required
+        />
         <Button variants={formElementVariants}>Send Email</Button>
       </Form>
       <div className="social-contacts">
@@ -75,6 +136,7 @@ const Contact = () => {
           </a>
         </motion.div>
       </div>
+      <AnimatePresence>{alert && <Alert text={alert} />}</AnimatePresence>
     </ContactSection>
   );
 };
