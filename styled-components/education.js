@@ -31,7 +31,7 @@ export const EducationContainer = styled.div`
   .education {
     margin-right: 30px;
     background: #111;
-    width: 500px;
+    max-width: 500px;
     padding: 2rem 4rem;
     margin: 30px auto;
     text-align: center;
