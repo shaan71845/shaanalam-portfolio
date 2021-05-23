@@ -7,6 +7,7 @@ import Sidebar from "../components/Sidebar";
 import Project from "../components/Project";
 import sanityClient from "../client";
 import { motion } from "framer-motion";
+import useTransition from "../Hooks/useTransition";
 
 const gridVariant = {
   hidden: { opacity: 0 },
@@ -24,28 +25,34 @@ const projectVariant = {
 };
 
 const Projects = ({ projects }) => {
+  const [SlideIn, SlideOut] = useTransition();
+
   return (
-    <ProjectSection>
-      <Container>
-        <Sidebar />
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Projects
-        </motion.h1>
-        <ProjectGrid variants={gridVariant} initial="hidden" animate="show">
-          {projects.map((project) => (
-            <Project
-              key={project.slug.current}
-              project={project}
-              variants={projectVariant}
-            />
-          ))}
-        </ProjectGrid>
-      </Container>
-    </ProjectSection>
+    <>
+      <ProjectSection>
+        <Container>
+          <Sidebar />
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Projects
+          </motion.h1>
+          <ProjectGrid variants={gridVariant} initial="hidden" animate="show">
+            {projects?.map((project) => (
+              <Project
+                key={project.slug.current}
+                project={project}
+                variants={projectVariant}
+              />
+            ))}
+          </ProjectGrid>
+        </Container>
+      </ProjectSection>
+      <SlideIn />
+      <SlideOut />
+    </>
   );
 };
 

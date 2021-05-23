@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
 
 const GlobalStyle = createGlobalStyle`
  * {
@@ -43,7 +44,9 @@ function MyApp({ Component, pageProps, router }) {
         />
       </Head>
       <GlobalStyle />
-      <Component {...pageProps} key={router.route} />
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </>
   );
 }

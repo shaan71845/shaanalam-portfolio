@@ -5,9 +5,12 @@ import sanityClient from "../client";
 import { init } from "ityped";
 import { motion } from "framer-motion";
 import SocialIconsComponent from "../components/SocialIconsComponent";
+import useTransition from "../Hooks/useTransition";
 
 const Home = ({ about }) => {
   const typingRef = useRef();
+
+  const [SlideIn, SlideOut] = useTransition();
 
   useEffect(() => {
     init(typingRef.current, {
@@ -22,48 +25,52 @@ const Home = ({ about }) => {
   }, []);
 
   return (
-    <HomeSection>
-      <Col>
-        <Sidebar />
-        <motion.h5
-          initial={{ opacity: 0, y: -30 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{ duration: 1, type: "tween" }}
-        >
-          Hi there, I'm
-        </motion.h5>
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          Shaan Alam
-        </motion.h1>
-        <Typing
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
-        >
-          <h2>I am a</h2>
-          <h2>
-            <span ref={typingRef}></span>
-          </h2>
-        </Typing>
-        <SocialIconsComponent />
-      </Col>
-      <Col>
-        <motion.img
-          initial={{ y: -30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
-          transition={{ duration: 1.8 }}
-          src={about.image.asset.url}
-          alt={about.name}
-        />
-      </Col>
-    </HomeSection>
+    <>
+      <HomeSection>
+        <Col>
+          <Sidebar />
+          <motion.h5
+            initial={{ opacity: 0, y: -30 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{ duration: 1, type: "tween" }}
+          >
+            Hi there, I'm
+          </motion.h5>
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            Shaan Alam
+          </motion.h1>
+          <Typing
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.5 }}
+          >
+            <h2>I am a</h2>
+            <h2>
+              <span ref={typingRef}></span>
+            </h2>
+          </Typing>
+          <SocialIconsComponent />
+        </Col>
+        <Col>
+          <motion.img
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
+            transition={{ duration: 1.8 }}
+            src={about?.image.asset.url}
+            alt={about?.name}
+          />
+        </Col>
+      </HomeSection>
+      <SlideIn />
+      <SlideOut />
+    </>
   );
 };
 

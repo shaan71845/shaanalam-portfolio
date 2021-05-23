@@ -14,7 +14,6 @@ const Project = ({ project, variants }) => {
       </ProjectImage>
       <ProjectDescription>
         <h1>{project.title}</h1>
-        <h4>ReactJS, Firebase, Material UI</h4>
         <Link href={project.live_link} target="_blank" rel="noreferrer">
           <Play /> Live Demo
         </Link>

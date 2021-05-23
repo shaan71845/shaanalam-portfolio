@@ -66,6 +66,8 @@ const Contact = () => {
     messageRef.current.value = "";
   };
 
+  const [SlideIn, SlideOut] = useTransition();
+  
   return (
     <ContactSection>
       <Sidebar />
