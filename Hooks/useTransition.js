@@ -28,7 +28,7 @@ const SlideInDiv = styled(motion.div)`
   left: 0;
   height: 100vh;
   width: 100%;
-  background: #fff;
+  background: #000;
   transform: scaleX(1);
   transform-origin: left;
   z-index: 100;
@@ -40,7 +40,7 @@ const SlideOutDiv = styled(motion.div)`
   left: 0;
   height: 100vh;
   width: 100%;
-  background: #fff;
+  background: #000;
   transform: scaleX(1);
   transform-origin: right;
   z-index: 100;
