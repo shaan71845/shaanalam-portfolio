@@ -59,7 +59,6 @@ const About = ({ about, experiences, education }) => {
 };
 
 export default About;
-Sl;
 
 export async function getStaticProps() {
   const about = await sanityClient.fetch(`*[_type == "author"] {
