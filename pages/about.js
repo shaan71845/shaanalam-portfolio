@@ -15,9 +15,9 @@ const About = ({ about, experiences, education }) => {
     <>
       <Section>
         <Container>
-          <Sidebar />
-          <Grid>
-            <Col>
+    <Sidebar />
+      <Grid>
+          <Col>
               <motion.h1
                 initial={{ y: -30, opacity: 0 }}
                 transition={{ duration: 1 }}
