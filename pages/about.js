@@ -6,18 +6,15 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import PreviousWorks from "../components/PreviousWorks";
 import { motion } from "framer-motion";
-import useTransition from "../Hooks/useTransition";
 
 const About = ({ about, experiences, education }) => {
-  const [SlideIn, SlideOut] = useTransition();
-
   return (
     <>
       <Section>
         <Container>
-    <Sidebar />
-      <Grid>
-          <Col>
+          <Sidebar />
+          <Grid>
+            <Col>
               <motion.h1
                 initial={{ y: -30, opacity: 0 }}
                 transition={{ duration: 1 }}
@@ -52,8 +49,6 @@ const About = ({ about, experiences, education }) => {
           <PreviousWorks experiences={experiences} />
         </Container>
       </Section>
-      <SlideIn />
-      <SlideOut />
     </>
   );
 };

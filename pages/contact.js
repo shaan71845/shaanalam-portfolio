@@ -16,7 +16,6 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
-import useTransition from '../Hooks/useTransition'
 
 const formVariants = {
   hidden: { opacity: 0, y: -30 },
@@ -30,8 +29,6 @@ const formElementVariants = {
 };
 
 const Contact = () => {
-  const [alert, setAlert] = useState(null);
-
   useEffect(() => {
     setTimeout(() => {
       setAlert("");
@@ -45,7 +42,6 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
 
     emailjs
       .sendForm(
@@ -70,79 +66,77 @@ const Contact = () => {
 
   return (
     <>
-    <ContactSection>
-      <Sidebar />
-      <motion.h1
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        Contact me!!
-      </motion.h1>
-      <Form
-        ref={formRef}
-        onSubmit={sendEmail}
-        variants={formVariants}
-        initial="hidden"
-        animate="show"
-        transition="transition"
-      >
-        <Input
-          placeholder="Your name"
-          name="from_name"
-          variants={formElementVariants}
-          ref={nameRef}
-          required
-        />
-        <Input
-          placeholder="Your Email"
-          email="email"
-          name="email"
-          variants={formElementVariants}
-          ref={emailRef}
-          required
-        />
-        <TextArea
-          placeholder="Message"
-          name="message"
-          variants={formElementVariants}
-          ref={messageRef}
-          required
-        />
-        <Button variants={formElementVariants}>Send Email</Button>
-      </Form>
-      <div className="social-contacts">
-        <motion.h4
+      <ContactSection>
+        <Sidebar />
+        <motion.h1
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1 }}
         >
-          Or Contact me through
-        </motion.h4>
-        <motion.div
-          className="social-contacts-links"
-          initial={{ y: -30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1.3 }}
+          Contact me!!
+        </motion.h1>
+        <Form
+          ref={formRef}
+          onSubmit={sendEmail}
+          variants={formVariants}
+          initial="hidden"
+          animate="show"
+          transition="transition"
         >
-          <a href="#!">
-            <LogoInstagram color="#FFF" />
-          </a>
-          <a href="#!">
-            <LogoGithub color="#FFF" />
-          </a>
-          <a href="#!">
-            <LogoLinkedin color="#FFF" />
-          </a>
-          <a href="#!">
-            <LogoTwitter color="#FFF" />
-          </a>
-        </motion.div>
-      </div>
-      <AnimatePresence>{alert && <Alert text={alert} />}</AnimatePresence>
-    </ContactSection>
-    <SlideIn />
-    <SlideOut />
+          <Input
+            placeholder="Your name"
+            name="from_name"
+            variants={formElementVariants}
+            ref={nameRef}
+            required
+          />
+          <Input
+            placeholder="Your Email"
+            email="email"
+            name="email"
+            variants={formElementVariants}
+            ref={emailRef}
+            required
+          />
+          <TextArea
+            placeholder="Message"
+            name="message"
+            variants={formElementVariants}
+            ref={messageRef}
+            required
+          />
+          <Button variants={formElementVariants}>Send Email</Button>
+        </Form>
+        <div className="social-contacts">
+          <motion.h4
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            Or Contact me through
+          </motion.h4>
+          <motion.div
+            className="social-contacts-links"
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.3 }}
+          >
+            <a href="#!">
+              <LogoInstagram color="#FFF" />
+            </a>
+            <a href="#!">
+              <LogoGithub color="#FFF" />
+            </a>
+            <a href="#!">
+              <LogoLinkedin color="#FFF" />
+            </a>
+            <a href="#!">
+              <LogoTwitter color="#FFF" />
+            </a>
+          </motion.div>
+        </div>
+        <AnimatePresence>{alert && <Alert text={alert} />}</AnimatePresence>
+      </ContactSection>
     </>
   );
 };

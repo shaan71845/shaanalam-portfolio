@@ -7,7 +7,6 @@ import Sidebar from "../components/Sidebar";
 import Project from "../components/Project";
 import sanityClient from "../client";
 import { motion } from "framer-motion";
-import useTransition from "../Hooks/useTransition";
 
 const gridVariant = {
   hidden: { opacity: 0 },
@@ -25,8 +24,6 @@ const projectVariant = {
 };
 
 const Projects = ({ projects }) => {
-  const [SlideIn, SlideOut] = useTransition();
-
   return (
     <>
       <ProjectSection>
@@ -50,8 +47,6 @@ const Projects = ({ projects }) => {
           </ProjectGrid>
         </Container>
       </ProjectSection>
-      <SlideIn />
-      <SlideOut />
     </>
   );
 };

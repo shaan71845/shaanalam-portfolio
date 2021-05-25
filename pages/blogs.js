@@ -2,7 +2,6 @@ import { BlogSection, Container, BlogGrid } from "../styled-components/blogs";
 import Sidebar from "../components/Sidebar";
 import Post from "../components/Post";
 import { motion } from "framer-motion";
-import useTransition from "../Hooks/useTransition";
 
 const blogGridVariants = {
   hidden: 0,
@@ -20,8 +19,6 @@ const postVariants = {
 };
 
 const Blogs = ({ posts }) => {
-  const [SlideIn, SlideOut] = useTransition();
-
   return (
     <>
       <BlogSection>
@@ -41,8 +38,6 @@ const Blogs = ({ posts }) => {
           </BlogGrid>
         </Container>
       </BlogSection>
-      <SlideIn />
-      <SlideOut />
     </>
   );
 };
