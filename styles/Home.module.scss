@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+.home {
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+}
+
+.main {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+
+  .heading {
+    font-family: "Abril Fatface", serif;
+    font-size: 4rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #303030;
+    margin-top: 2rem;
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    font-family: "Alegreya Sans", sans-serif;
+  }
+
+  .actions {
+    margin-top: 4rem;
+    display: flex;
+
+    div:nth-child(2) {
+      margin: 0 20px;
+    }
+  }
+}
+
+.code {
+  position: absolute;
+  bottom: 100px;
+  right: 0px;
+  width: 400px;
+}
+
+.main {
+  .heading {
+    &-inner {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  .subtitle {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .actions {
+    &-inner {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}

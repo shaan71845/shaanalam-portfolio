@@ -3,6 +3,8 @@ import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 
 const GlobalStyle = createGlobalStyle`
+  @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
  * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-   background: rgba(0, 0, 0, 0.7);
+   background: #fff;
   }
 
   ::-webkit-scrollbar {
@@ -38,9 +40,14 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
+          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;500;600;900&display=swap"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap"
+          rel="stylesheet"
         />
       </Head>
       <GlobalStyle />
