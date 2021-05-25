@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   background: #fff;
 `;
 
 export const Container = styled.div`
-  width: 80%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   display: flex;

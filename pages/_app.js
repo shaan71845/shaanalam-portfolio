@@ -3,8 +3,6 @@ import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-
  * {
     margin: 0;
     padding: 0;
