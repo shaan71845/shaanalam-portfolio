@@ -37,15 +37,11 @@
 
 .main-right {
   flex: 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 
   .container {
     width: 90%;
-    margin: auto;
+    margin: 4rem auto;
     overflow: hidden;
-    justify-self: center;
   }
 
   .code {

@@ -44,7 +44,11 @@ const Home = () => {
             <LogoLinkedin color="#303030" />
           </a>
         </div>
-        <span></span>
+        <motion.span
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "100px", opacity: 1 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+        ></motion.span>
       </aside>
       <div className={homeStyles["main-right"]}>
         <Navbar />
