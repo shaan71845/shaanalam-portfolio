@@ -9,6 +9,7 @@ import {
   LogoLinkedin,
   LogoTwitter,
 } from "react-ionicons";
+import withTransition from "../HOC/withTransition";
 
 const Home = () => {
   return (
@@ -114,4 +115,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withTransition(Home);
