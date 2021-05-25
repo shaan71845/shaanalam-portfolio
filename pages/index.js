@@ -45,7 +45,7 @@ const Home = () => {
                 className={buttonStyles["btn-primary"]}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.5, delay: 0.5 }}
               >
                 My Projects
               </motion.a>
@@ -57,7 +57,7 @@ const Home = () => {
               className={buttonStyles["btn-primary"]}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+              transition={{ ease: "easeIn", duration: 0.5, delay: 0.5 }}
             >
               Download CV
             </motion.a>

@@ -14,7 +14,7 @@ export const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.div``;
 
 export const Bars = styled.a`
   cursor: pointer;

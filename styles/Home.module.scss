@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import "config";
+
 .home {
   height: 100vh;
   width: 100%;
@@ -18,12 +20,20 @@
     text-transform: uppercase;
     color: #303030;
     margin-top: 2rem;
+
+    @include mobileL {
+      font-size: 2rem;
+    }
   }
 
   p {
     color: rgba(0, 0, 0, 0.6);
     font-size: 2rem;
     font-family: "Alegreya Sans", sans-serif;
+
+    @include mobileL {
+      font-size: 1rem;
+    }
   }
 
   .actions {
@@ -38,9 +48,14 @@
 
 .code {
   position: absolute;
-  bottom: 100px;
+  bottom: 10px;
   right: 0px;
-  width: 400px;
+  width: 350px;
+
+  // Hide svg background on screen < 900px;
+  @include tabletL {
+    display: none;
+  }
 }
 
 .main {
