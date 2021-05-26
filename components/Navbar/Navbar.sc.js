@@ -21,6 +21,7 @@ export const Bars = styled.a`
   width: 30px;
   height: 30px;
   position: relative;
+  z-index: 3;
 
   ::before {
     content: "";

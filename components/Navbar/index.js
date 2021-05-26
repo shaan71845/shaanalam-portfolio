@@ -1,6 +1,8 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Nav, Container, Logo, Bars } from "./Navbar.sc";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import Menu from "../Menu";
 
 const logoVariants = {
   hidden: {
@@ -12,6 +14,9 @@ const logoVariants = {
 };
 
 const Navbar = () => {
+  // To toggle menu
+  const [isMenu, setIsMenu] = useState(false);
+
   return (
     <Nav>
       <Container>
@@ -55,8 +60,9 @@ const Navbar = () => {
             </defs>
           </motion.svg>
         </Logo>
-        <Bars active={false} />
+        <Bars active={false} onClick={() => setIsMenu(!isMenu)} />
       </Container>
+      <AnimatePresence exitBeforeEnter>{isMenu && <Menu />}</AnimatePresence>
     </Nav>
   );
 };
