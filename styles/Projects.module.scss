@@ -1,0 +1,114 @@
+.projects-intro-section {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+  h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 400%;
+    color: #303030;
+
+    .h1-inner {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Alegreya Sans", sans-serif;
+    line-height: 1.6;
+  }
+}
+
+.projects-section {
+  height: 100vh;
+  width: 100%;
+
+  .projects {
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  grid-gap: 1em;
+
+  // Project cover image styles
+  .project-cover {
+    position: relative;
+    overflow: hidden;
+
+    &-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      transform-origin: left;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Project description styles
+  .project-desc {
+    padding: 0 2rem;
+
+    &-heading {
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+
+      &-inner h1 {
+        font-family: "Abril Fatface", serif;
+        font-size: 200%;
+        color: #303030;
+      }
+    }
+
+    &-text {
+      position: relative;
+      overflow: hidden;
+
+      &-inner p {
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1rem;
+        font-family: "Alegreya", sans-serif;
+      }
+    }
+
+    &-links {
+      width: 100%;
+      margin: 2rem 0;
+      display: flex;
+
+      .project-desc-link {
+        margin-right: 20px;
+        position: relative;
+        overflow: hidden;
+
+        &-inner a {
+          color: #303030;
+        }
+      }
+    }
+  }
+}
