@@ -16,8 +16,6 @@ import {
 import styled from "styled-components";
 
 const Project = ({ project }) => {
-  console.log(project);
-
   const [headingRef, headingInView] = useInView({
     rootMargin: "-100px",
   });
@@ -78,7 +76,7 @@ const Project = ({ project }) => {
         ></motion.div>
         <motion.img
           ref={imageRef}
-          src="./images/covidtracker.jpg"
+          src={project?.mainImage?.asset?.url}
           alt="Covid Tracker"
           initial={{ scale: 1.6 }}
           animate={imageControls}
@@ -94,7 +92,7 @@ const Project = ({ project }) => {
             animate={headingControls}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <h1>Covid Tracker</h1>
+            <h1>{project?.title}</h1>
           </motion.div>
         </ProjectHeading>
         <ProjectText>
@@ -127,7 +125,9 @@ const Project = ({ project }) => {
                 delay: 0.1,
               }}
             >
-              <a href="#!">Live Demo</a>
+              <a href={project?.live_link} target="_blank" rel="noreferrer">
+                Live Demo
+              </a>
             </motion.div>
           </ProjectLink>
           <ProjectLink>
@@ -142,7 +142,9 @@ const Project = ({ project }) => {
                 delay: 0.3,
               }}
             >
-              <a href="#!">GitHub Repo</a>
+              <a href={project?.github_link} target="_blank" rel="noreferrer">
+                GitHub Repo
+              </a>
             </motion.div>
           </ProjectLink>
         </ProjectLinks>

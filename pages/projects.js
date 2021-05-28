@@ -9,8 +9,6 @@ import withTransition from "../HOC/withTransition";
 import sanityClient from "../client";
 
 const Projects = ({ projects }) => {
-  console.log(projects);
-
   return (
     <>
       <section className={projectStyles["projects-intro-section"]}>
