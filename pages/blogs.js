@@ -8,23 +8,7 @@ const Blogs = ({ posts }) => {
 
   return (
     <>
-      <BlogSection>
-        <Container>
-          <Sidebar />
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Blog Posts
-          </motion.h1>
-          <BlogGrid
-            variants={blogGridVariants}
-            initial="hidden"
-            animate="show"
-          ></BlogGrid>
-        </Container>
-      </BlogSection>
+      <div>hello</div>
     </>
   );
 };
