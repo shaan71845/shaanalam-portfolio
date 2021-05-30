@@ -1,0 +1,46 @@
+.blogs {
+  padding-bottom: 15em;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+  h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 400%;
+    color: #303030;
+
+    .h1-inner {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Alegreya Sans", sans-serif;
+    line-height: 1.6;
+
+    .p-inner {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+.blogs-section {
+  height: 100vh;
+  width: 100%;
+
+  .blogs {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

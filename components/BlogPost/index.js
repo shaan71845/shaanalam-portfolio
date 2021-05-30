@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { slideUpVariants } from "../../utils/variants";
-import projectStyles from "../../styles/Projects.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
-  ProjectWrapper,
-  ProjectCover,
-  ProjectDescription,
-  ProjectHeading,
-  ProjectText,
-  ProjectLinks,
-  ProjectLink,
-} from "./Project.sc";
+  PostWrapper,
+  PostCover,
+  PostDescription,
+  PostHeading,
+  PostText,
+  PostLinks,
+  PostLink,
+} from "./BlogPost.sc";
+import Link from "next/link";
 
-const Project = ({ project }) => {
+const BlogPost = ({ post }) => {
   const [headingRef, headingInView] = useInView({
     rootMargin: "-100px",
   });
@@ -64,8 +64,8 @@ const Project = ({ project }) => {
   }, [imageInView, imageControls, imageCoverControls]);
 
   return (
-    <ProjectWrapper>
-      <ProjectCover>
+    <PostWrapper>
+      <PostCover>
         <motion.div
           className="project-cover-inner"
           initial={{ scaleX: 1 }}
@@ -74,46 +74,40 @@ const Project = ({ project }) => {
         ></motion.div>
         <motion.img
           ref={imageRef}
-          src={project?.mainImage?.asset?.url}
+          src={post?.cover_image}
           alt="Covid Tracker"
           initial={{ scale: 1.6 }}
           animate={imageControls}
           transition={{ duration: 0.7, ease: "easeInOut" }}
         />
-      </ProjectCover>
-      <ProjectDescription>
-        <ProjectHeading>
+      </PostCover>
+      <PostDescription>
+        <PostHeading>
           <motion.div
             ref={headingRef}
-            className="project-heading-inner"
+            className="post-heading-inner"
             initial={{ y: "100%" }}
             animate={headingControls}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <h1>{project?.title}</h1>
+            <h1>{post?.title}</h1>
           </motion.div>
-        </ProjectHeading>
-        <ProjectText>
+        </PostHeading>
+        <PostText>
           <motion.div
             ref={textRef}
-            className="project-text-inner"
+            className="post-text-inner"
             initial={{ y: "100%" }}
             animate={textControls}
             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
           >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
-              maxime natus culpa earum. Architecto maiores fuga minima explicabo
-              deleniti dolorem magni corrupti, ut, fugiat facilis in esse soluta
-              iusto molestiae. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Minima, velit.
-            </p>
+            <p>{post?.description}</p>
           </motion.div>
-        </ProjectText>
-        <ProjectLinks>
-          <ProjectLink>
+        </PostText>
+        <PostLinks>
+          <PostLink>
             <motion.div
-              className="project-link-inner"
+              className="post-link-inner"
               ref={linkRef}
               initial={{ y: "100%" }}
               animate={linkControls}
@@ -123,32 +117,15 @@ const Project = ({ project }) => {
                 delay: 0.1,
               }}
             >
-              <a href={project?.live_link} target="_blank" rel="noreferrer">
-                Live Demo
-              </a>
+              <Link href={`/blog/${post.slug}`}>
+                <a>Read more...</a>
+              </Link>
             </motion.div>
-          </ProjectLink>
-          <ProjectLink>
-            <motion.div
-              ref={linkRef}
-              className="project-link-inner"
-              initial={{ y: "100%" }}
-              animate={linkControls}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-                delay: 0.3,
-              }}
-            >
-              <a href={project?.github_link} target="_blank" rel="noreferrer">
-                GitHub Repo
-              </a>
-            </motion.div>
-          </ProjectLink>
-        </ProjectLinks>
-      </ProjectDescription>
-    </ProjectWrapper>
+          </PostLink>
+        </PostLinks>
+      </PostDescription>
+    </PostWrapper>
   );
 };
 
-export default Project;
+export default BlogPost;
