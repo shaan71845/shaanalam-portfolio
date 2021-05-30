@@ -67,7 +67,7 @@ const BlogPost = ({ post }) => {
     <PostWrapper>
       <PostCover>
         <motion.div
-          className="project-cover-inner"
+          className="post-cover-inner"
           initial={{ scaleX: 1 }}
           animate={imageCoverControls}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -117,7 +117,7 @@ const BlogPost = ({ post }) => {
                 delay: 0.1,
               }}
             >
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/blog/${post.id}`} as="/blog/[slug]">
                 <a>Read more...</a>
               </Link>
             </motion.div>
