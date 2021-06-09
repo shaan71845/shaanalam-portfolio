@@ -47,6 +47,10 @@ function MyApp({ Component, pageProps, router }) {
           href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <GlobalStyle />
       <AnimatePresence exitBeforeEnter>
