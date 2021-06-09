@@ -9,7 +9,7 @@ export const SlideIn = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #121212;
+  background: #000;
   transform-origin: left;
   z-index: 4;
 `;
@@ -22,7 +22,7 @@ export const SlideOut = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #121212;
+  background: #000;
   transform-origin: right;
   z-index: 4;
 `;

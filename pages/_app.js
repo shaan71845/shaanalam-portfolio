@@ -55,6 +55,10 @@ function MyApp({ Component, pageProps, router }) {
           href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="http://fonts.cdnfonts.com/css/operator-mono"
+          rel="stylesheet"
+        />
       </Head>
       <GlobalStyle />
       <AnimatePresence exitBeforeEnter>

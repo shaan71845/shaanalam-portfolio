@@ -3,6 +3,9 @@ import ReactMarkdown from "react-markdown";
 import CodeSnippet from "../../components/CodeSnippet";
 import gfm from "remark-gfm";
 import Moment from "react-moment";
+import withTransition from "../../HOC/withTransition";
+import Link from "next/link";
+import Navbar from "../../components/Navbar";
 
 const Post = ({ post }) => {
   console.log(post);
@@ -18,9 +21,13 @@ const Post = ({ post }) => {
 
   return (
     <section className={styles.post}>
-      <div className={styles.container}>
-        <header>
-          <img src={post.cover_image} alt={post.title} />
+      <Navbar theme="dark" />
+      <header className={styles.header}>
+        <Link href="/blogs">
+          <a className={styles["go-back-btn"]}>Go Back</a>
+        </Link>
+        <img src={post.cover_image} alt={post.title} />
+        <div className={styles.container}>
           <h1>{post.title}</h1>
           <div className={styles.tags}>
             <div className={styles["created-at"]}>
@@ -34,8 +41,9 @@ const Post = ({ post }) => {
               <small key={tag}>#{tag}</small>
             ))}
           </div>
-        </header>
-
+        </div>
+      </header>
+      <div className={styles.container}>
         <div className={styles["post-body"]}>
           <ReactMarkdown
             className="md-content"
@@ -51,7 +59,7 @@ const Post = ({ post }) => {
   );
 };
 
-export default Post;
+export default withTransition(Post);
 
 export async function getStaticProps(context) {
   const res = await fetch(`https://dev.to/api/articles/${context.params.id}`);
