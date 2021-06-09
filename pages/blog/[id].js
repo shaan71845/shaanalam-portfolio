@@ -22,10 +22,12 @@ const Post = ({ post }) => {
   return (
     <section className={styles.post}>
       <Navbar theme="dark" />
-      <header className={styles.header}>
+      <div className={styles.container}>
         <Link href="/blogs">
           <a className={styles["go-back-btn"]}>Go Back</a>
         </Link>
+      </div>
+      <header className={styles.header}>
         <img src={post.cover_image} alt={post.title} />
         <div className={styles.container}>
           <h1>{post.title}</h1>
