@@ -1,6 +1,6 @@
 /**
  * @type - object
- * @desc - Variant object for slideup animations
+ * @desc - Variant object for text slideup animations
  */
 
 export const slideUpVariants = {

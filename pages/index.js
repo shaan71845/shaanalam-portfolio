@@ -10,6 +10,7 @@ import {
   LogoTwitter,
 } from "react-ionicons";
 import withTransition from "../HOC/withTransition";
+import { slideUpVariants } from "../utils/variants";
 
 const linkContainerVariants = {
   hidden: {
@@ -88,8 +89,9 @@ const Home = () => {
             <h1 className={homeStyles.heading}>
               <div className={homeStyles["heading-inner"]}>
                 <motion.div
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
+                  variants={slideUpVariants}
+                  initial="hidden"
+                  animate="visible"
                   transition={{ ease: "easeOut", duration: 1 }}
                 >
                   Hey,
@@ -97,8 +99,9 @@ const Home = () => {
               </div>
               <div className={homeStyles["heading-inner"]}>
                 <motion.div
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
+                  variants={slideUpVariants}
+                  initial="hidden"
+                  animate="visible"
                   transition={{ ease: "easeOut", duration: 1, delay: 0.3 }}
                 >
                   I am Shaan Alam
@@ -131,8 +134,9 @@ const Home = () => {
                 <motion.a
                   href="#!"
                   className={buttonStyles["btn-primary"]}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
+                  variants={slideUpVariants}
+                  initial="hidden"
+                  animate="visible"
                   transition={{ ease: "easeIn", duration: 0.5, delay: 0.5 }}
                 >
                   Download CV
