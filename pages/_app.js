@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps, router }) {
         />
       </Head>
       <GlobalStyle />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence initial={false} exitBeforeEnter>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </>
