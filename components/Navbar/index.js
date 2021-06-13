@@ -30,7 +30,7 @@ const Navbar = ({ theme }) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0)">
+              <g clipPath="url(#clip0)">
                 <motion.path
                   d="M47.2547 0.745346H0.745361V47.2547H47.2547V0.745346Z"
                   stroke="white"

@@ -148,6 +148,8 @@ const Home = () => {
             src="./images/coding.svg"
             alt="Logo"
             className={homeStyles["hero-image"]}
+            onError={() => console.log("###error")}
+            onLoad={() => console.log("###error")}
           />
         </div>
       </div>
