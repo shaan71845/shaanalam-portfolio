@@ -87,6 +87,7 @@ const withTransition = (OriginalComponent) => {
         className={styles["slide-in"]}
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
+        transition={{ duration: 0.6 }}
         exit={{ scaleX: 1 }}
         transition={{ duration: 1 }}
       />
@@ -94,6 +95,7 @@ const withTransition = (OriginalComponent) => {
         className={styles["slide-out"]}
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}
+        transition={{ duration: 0.6 }}
         exit={{ scaleX: 0 }}
         transition={{ duration: 1 }}
       />
