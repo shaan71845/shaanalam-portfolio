@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   width: 100%;
   padding: 20px 0;
-  background: ${(props) => (props.theme === "dark" ? "#000" : "#fff")};
+  background: #000;
 `;
 
 export const Container = styled.div`
@@ -33,7 +33,7 @@ export const Bars = styled.a`
     top: 0;
     left: 0;
     margin: 10px 0;
-    background: ${(props) => (props.theme === "dark" ? "#fff" : "#000")};
+    background: #fff;
     height: 3px;
     width: 30px;
     transform: ${(props) => (props.active === true ? "rotate(45deg)" : "none")};
@@ -46,7 +46,7 @@ export const Bars = styled.a`
     top: 10px;
     left: 0;
     margin: 10px 0;
-    background: ${(props) => (props.theme === "dark" ? "#fff" : "#000")};
+    background: #fff;
     height: 3px;
     width: 30px;
     transform: ${(props) => (props.active ? "scaleX(0)" : "scaleX(1)")};
@@ -59,7 +59,7 @@ export const Bars = styled.a`
     top: ${(props) => (props.active ? "20px" : "20px")};
     left: ${(props) => (props.active ? "0px" : "0px")};
     margin: 10px 0;
-    background: ${(props) => (props.theme === "dark" ? "#fff" : "#000")};
+    background: #fff;
     height: 3px;
     width: 30px;
     transform: ${(props) =>

@@ -118,7 +118,7 @@ const BlogPost = ({ post }) => {
               }}
             >
               <Link href={`/blog/${post.id}`}>
-                <a>Read more...</a>
+                <a>Read more &rarr;</a>
               </Link>
             </motion.div>
           </PostLink>

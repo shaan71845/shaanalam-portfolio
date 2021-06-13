@@ -10,7 +10,7 @@ export const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${(props) => (props.theme === "dark" ? "#000" : "#fff")};
+  background: #000;
   z-index: 2;
 `;
 
@@ -26,7 +26,7 @@ export const LinkContainerInner = styled(motion.div)`
     text-align: center;
     font-size: 300%;
     text-decoration: none;
-    color: ${(props) => (props.theme === "dark" ? "#fff" : "#303030")};
+    color: #fff;
     font-family: "Abril Fatface", serif;
     font-weight: bold;
 

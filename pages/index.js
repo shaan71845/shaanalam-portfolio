@@ -49,7 +49,7 @@ const Home = () => {
             rel="noreferrer"
             vartiants={linkVariants}
           >
-            <LogoInstagram color="#303030" />
+            <LogoInstagram color="#fff" />
           </motion.a>
           <motion.a
             href="https://github.com/shaan71845"
@@ -57,7 +57,7 @@ const Home = () => {
             rel="noreferrer"
             variants={linkVariants}
           >
-            <LogoGithub color="#303030" />
+            <LogoGithub color="#fff" />
           </motion.a>
           <motion.a
             href="https://twitter.com/shaancodes"
@@ -65,7 +65,7 @@ const Home = () => {
             rel="noreferrer"
             variants={linkVariants}
           >
-            <LogoTwitter color="#303030" />
+            <LogoTwitter color="#fff" />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/shaan-alam-01784018a/"
@@ -73,7 +73,7 @@ const Home = () => {
             rel="noreferrer"
             variants={linkVariants}
           >
-            <LogoLinkedin color="#303030" />
+            <LogoLinkedin color="#fff" />
           </motion.a>
         </motion.div>
         <motion.span

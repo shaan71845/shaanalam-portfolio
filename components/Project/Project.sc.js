@@ -22,7 +22,7 @@ export const ProjectCover = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background: #fff;
+    background: #000;
     transform-origin: left;
     z-index: 2;
   }
@@ -40,7 +40,7 @@ export const ProjectHeading = styled.div`
   .project-heading-inner h1 {
     font-family: "Abril Fatface", serif;
     font-size: 200%;
-    color: #303030;
+    color: #fff;
   }
 `;
 
@@ -50,7 +50,7 @@ export const ProjectText = styled.div`
 
   .project-text-inner p {
     line-height: 1.6;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 1rem;
     font-family: "Alegreya", sans-serif;
   }
@@ -68,6 +68,6 @@ export const ProjectLink = styled.div`
   overflow: hidden;
 
   .project-link-inner a {
-    color: #303030;
+    color: #fff;
   }
 `;
