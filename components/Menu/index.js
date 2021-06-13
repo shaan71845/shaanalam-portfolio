@@ -54,7 +54,9 @@ const Menu = ({ theme }) => {
             theme={theme}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <Link href="/">Home</Link>
+            <Link href="/" scroll={false}>
+              Home
+            </Link>
           </LinkContainerInner>
         </LinkContainer>
         <LinkContainer>
@@ -65,7 +67,9 @@ const Menu = ({ theme }) => {
             theme={theme}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects" scroll={false}>
+              Projects
+            </Link>
           </LinkContainerInner>
         </LinkContainer>
         <LinkContainer>
@@ -76,7 +80,9 @@ const Menu = ({ theme }) => {
             theme={theme}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            <Link href="/blogs">Blogs</Link>
+            <Link href="/blogs" scroll={false}>
+              Blogs
+            </Link>
           </LinkContainerInner>
         </LinkContainer>
         <LinkContainer>
@@ -87,7 +93,9 @@ const Menu = ({ theme }) => {
             theme={theme}
             transition={{ duration: 1, delay: 0.9 }}
           >
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" scroll={false}>
+              Contact
+            </Link>
           </LinkContainerInner>
         </LinkContainer>
       </Container>

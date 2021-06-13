@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Logo = styled.div`
   cursor: pointer;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 `;
 
 export const Bars = styled.a`
@@ -25,7 +25,7 @@ export const Bars = styled.a`
   width: 30px;
   height: 40px;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 
   span:nth-child(1) {
     transition: transform 0.4s ease-in-out;

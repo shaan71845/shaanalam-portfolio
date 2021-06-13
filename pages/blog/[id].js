@@ -23,7 +23,7 @@ const Post = ({ post }) => {
     <section className={styles.post}>
       <Navbar theme="dark" />
       <div className={styles.container}>
-        <Link href="/blogs">
+        <Link href="/blogs" scroll={false}>
           <a className={styles["go-back-btn"]}>Go Back</a>
         </Link>
       </div>

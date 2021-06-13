@@ -119,7 +119,7 @@ const Home = () => {
             </div>
             <div className={homeStyles.actions}>
               <div className={homeStyles["actions-inner"]}>
-                <Link href="/projects">
+                <Link href="/projects" scroll={false}>
                   <motion.a
                     className={buttonStyles["btn-primary"]}
                     initial={{ y: "100%" }}

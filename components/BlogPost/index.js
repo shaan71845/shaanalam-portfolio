@@ -117,7 +117,7 @@ const BlogPost = ({ post }) => {
                 delay: 0.1,
               }}
             >
-              <Link href={`/blog/${post.id}`}>
+              <Link href={`/blog/${post.id}`} scroll={false}>
                 <a>Read more &rarr;</a>
               </Link>
             </motion.div>

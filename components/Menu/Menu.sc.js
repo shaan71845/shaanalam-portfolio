@@ -11,7 +11,7 @@ export const Wrapper = styled(motion.div)`
   justify-content: center;
   align-items: center;
   background: #000;
-  z-index: 2;
+  z-index: 4;
 `;
 
 export const LinkContainer = styled(motion.div)`

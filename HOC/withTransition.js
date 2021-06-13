@@ -40,12 +40,15 @@ const logoVariants = {
 export const svgVariants = {
   hidden: {
     opacity: 0,
+    display: "none",
   },
   visible: {
     opacity: 0,
+    display: "none",
   },
   exit: {
     opacity: 1,
+    display: "block",
   },
 };
 
