@@ -3,7 +3,7 @@
 .main {
   display: flex;
   height: 100vh;
-  background: #000;
+  background: #fff;
 }
 
 .main-aside {
@@ -32,7 +32,7 @@
   & > span {
     height: 120px;
     width: 2px;
-    background: #fff;
+    background: #121212;
     transform-origin: bottom;
   }
 }
@@ -69,7 +69,7 @@
       font-size: 4rem;
       line-height: 1.5;
       text-transform: uppercase;
-      color: #fff;
+      color: #121212;
 
       &-inner {
         position: relative;
