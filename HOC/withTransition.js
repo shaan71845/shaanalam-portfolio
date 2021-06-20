@@ -11,7 +11,7 @@ export const parentContainerVariant = {
     opacity: 1,
     transform: "translateX(0px)",
     transition: {
-      delay: 0.2,
+      delay: 0.7,
       type: "spring",
       bounce: 0,
       damping: 20,
