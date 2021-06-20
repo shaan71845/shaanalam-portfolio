@@ -36,14 +36,13 @@ const menuVariants = {
   },
 };
 
-const Menu = ({ theme }) => {
+const Menu = () => {
   return (
     <Wrapper
       variants={menuVariants}
       initial="hidden"
       animate="visible"
       exit="exit"
-      theme={theme}
     >
       <Container>
         <LinkContainer>
@@ -51,7 +50,6 @@ const Menu = ({ theme }) => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            theme={theme}
             transition={{ duration: 1, delay: 0.3 }}
           >
             <Link href="/" scroll={false}>
@@ -64,7 +62,18 @@ const Menu = ({ theme }) => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            theme={theme}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <Link href="/about" scroll={false}>
+              About
+            </Link>
+          </LinkContainerInner>
+        </LinkContainer>
+        <LinkContainer>
+          <LinkContainerInner
+            variants={menuLinkVariants}
+            initial="hidden"
+            animate="visible"
             transition={{ duration: 1, delay: 0.5 }}
           >
             <Link href="/projects" scroll={false}>
@@ -77,7 +86,6 @@ const Menu = ({ theme }) => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            theme={theme}
             transition={{ duration: 1, delay: 0.7 }}
           >
             <Link href="/blogs" scroll={false}>
@@ -90,7 +98,6 @@ const Menu = ({ theme }) => {
             variants={menuLinkVariants}
             initial="hidden"
             animate="visible"
-            theme={theme}
             transition={{ duration: 1, delay: 0.9 }}
           >
             <Link href="/contact" scroll={false}>

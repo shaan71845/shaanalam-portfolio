@@ -71,6 +71,7 @@ function MyApp({ Component, pageProps, router }) {
         style={{
           maxWidth: "100vw",
           width: "100vw",
+          overflow: "hidden",
         }}
       >
         <AnimatePresence

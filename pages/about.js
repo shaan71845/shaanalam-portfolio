@@ -1,59 +1,19 @@
-import { Section, Container, Grid, Col } from "../styled-components/about";
-import Sidebar from "../components/Sidebar";
-import BlockContent from "@sanity/block-content-to-react";
+import withTransition from "../HOC/withTransition";
 import sanityClient from "../client";
-import Education from "../components/Education";
-import Skills from "../components/Skills";
-import PreviousWorks from "../components/PreviousWorks";
-import { motion } from "framer-motion";
 
-const About = ({ about, experiences, education }) => {
+const About = () => {
   return (
-    <>
-      <Section>
-        <Container>
-          <Sidebar />
-          <Grid>
-            <Col>
-              <motion.h1
-                initial={{ y: -30, opacity: 0 }}
-                transition={{ duration: 1 }}
-                animate={{ y: 0, opacity: 1 }}
-              >
-                About me
-              </motion.h1>
-              <motion.div
-                initial={{ y: -30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.43, duration: 1 }}
-              >
-                <BlockContent
-                  blocks={about.bio[0]}
-                  projectId={process.env.PROJECT_ID}
-                  dataset={process.env.DATASET}
-                />
-              </motion.div>
-            </Col>
-            <Col>
-              <motion.img
-                initial={{ y: -30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1, scale: [1.3, 1] }}
-                transition={{ duration: 1.8 }}
-                src={about.image.asset.url}
-                alt="Shaan Alam"
-              />
-            </Col>
-          </Grid>
-          <Education education={education} />
-          <Skills />
-          <PreviousWorks experiences={experiences} />
-        </Container>
-      </Section>
-    </>
+    <div>
+      <div>
+        <div>
+          <p>hello</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default About;
+export default withTransition(About);
 
 export async function getStaticProps() {
   const about = await sanityClient.fetch(`*[_type == "author"] {
