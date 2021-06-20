@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 /** @Desc: The Slide div in animation when the component is unmounted
  */
 export const SlideIn = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -19,7 +19,7 @@ export const SlideIn = styled(motion.div)`
 /** @Desc: The Slide out div animation when a new component is mounted
  */
 export const SlideOut = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
