@@ -26,7 +26,7 @@ export const LinkContainerInner = styled(motion.div)`
     text-align: center;
     font-size: 300%;
     text-decoration: none;
-    color: #121212;
+    color: #303030;
     font-family: "Abril Fatface", serif;
     font-weight: bold;
 

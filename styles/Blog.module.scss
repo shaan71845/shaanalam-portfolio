@@ -11,7 +11,7 @@
   h1 {
     font-family: "Abril Fatface", serif;
     font-size: 400%;
-    color: #121212;
+    color: #000;
 
     .h1-inner {
       position: relative;
@@ -33,6 +33,7 @@
 }
 
 .blogs-section {
+  margin-top: 250px;
   height: 100vh;
   width: 100%;
 

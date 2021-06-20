@@ -20,7 +20,7 @@ const Projects = ({ projects }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 0.8 }}
               >
                 Some amazing Projects
               </motion.div>
@@ -30,7 +30,7 @@ const Projects = ({ projects }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 0.4 }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 0.94 }}
               >
                 I've created!!
               </motion.div>
@@ -42,7 +42,7 @@ const Projects = ({ projects }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
               >
                 I am someone who loves to solve problems through coding.
               </motion.div>
@@ -52,7 +52,7 @@ const Projects = ({ projects }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 0.8 }}
+                transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
               >
                 This is what I enjoy doing, so I create projects to learn and
                 grow more as a developer.

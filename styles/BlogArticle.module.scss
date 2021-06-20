@@ -2,7 +2,7 @@
 
 .post {
   width: 100vw;
-  background: #000;
+  background: #fff;
 }
 
 .go-back-btn {
@@ -11,7 +11,9 @@
   padding: 16px 24px;
   background: #fff;
   font-family: "Poppins", sans-serif;
-  color: #000;
+  color: #303030;
+  border: 2px solid #303030;
+  font-weight: bolder;
   cursor: pointer;
   text-decoration: none;
 
@@ -35,7 +37,7 @@
     font-family: "Abril Fatface", serif;
     margin: 30px 0 20px 0;
     font-size: 300%;
-    color: #fff;
+    color: #121212;
 
     @include mobileL {
       font-size: 200%;
@@ -44,7 +46,7 @@
 
   .tags {
     small {
-      color: #ddd;
+      color: #333;
       margin-right: 10px;
       font-family: "Poppins", sans-serif;
     }
@@ -82,13 +84,13 @@
     h4,
     h5,
     h6 {
-      color: #fff;
+      color: #000;
       font-family: "Abril Fatface", serif;
       margin: 1em 0;
     }
 
     p {
-      color: #fff;
+      color: #303030;
       font-family: "Poppins", sans-serif;
       line-height: 1.6;
       margin: 0.5em 0;
@@ -100,7 +102,8 @@
     }
 
     p code {
-      background: #444;
+      background: #222;
+      color: #fff;
       padding: 5px;
       font-family: "Operator Mono", sans-serif;
     }

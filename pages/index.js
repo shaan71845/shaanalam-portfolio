@@ -92,7 +92,7 @@ const Home = () => {
                   variants={slideUpVariants}
                   initial="hidden"
                   animate="visible"
-                  transition={{ ease: "easeOut", duration: 1 }}
+                  transition={{ ease: "easeOut", duration: 1, delay: 0.8 }}
                 >
                   Hey,
                 </motion.div>
@@ -102,7 +102,7 @@ const Home = () => {
                   variants={slideUpVariants}
                   initial="hidden"
                   animate="visible"
-                  transition={{ ease: "easeOut", duration: 1, delay: 0.3 }}
+                  transition={{ ease: "easeOut", duration: 1, delay: 0.89 }}
                 >
                   I am Shaan Alam
                 </motion.div>
@@ -112,7 +112,7 @@ const Home = () => {
               <motion.p
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ ease: "easeOut", duration: 1, delay: 0.459 }}
+                transition={{ ease: "easeOut", duration: 1, delay: 0.9 }}
               >
                 I turn ideas into code...
               </motion.p>
@@ -124,7 +124,7 @@ const Home = () => {
                     className={buttonStyles["btn-primary"]}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
-                    transition={{ ease: "easeIn", duration: 0.5, delay: 0.5 }}
+                    transition={{ ease: "easeIn", duration: 0.5, delay: 1 }}
                   >
                     My Projects
                   </motion.a>
@@ -137,7 +137,7 @@ const Home = () => {
                   variants={slideUpVariants}
                   initial="hidden"
                   animate="visible"
-                  transition={{ ease: "easeIn", duration: 0.5, delay: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.5, delay: 1.05 }}
                 >
                   Download CV
                 </motion.a>

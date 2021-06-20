@@ -45,6 +45,7 @@ export const svgVariants = {
   visible: {
     opacity: 0,
     display: "none",
+    transition: { delay: 0.5, ease: "easeInOut" },
   },
   exit: {
     opacity: 1,
@@ -64,7 +65,7 @@ export const pathVariants = {
   },
   exit: {
     pathLength: 1,
-    transition: { duration: 0.7, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 0.7, ease: [0.65, 0, 0.35, 1], delay: 0.6 },
   },
 };
 

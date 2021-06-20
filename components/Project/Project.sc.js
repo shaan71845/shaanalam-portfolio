@@ -40,7 +40,7 @@ export const ProjectHeading = styled.div`
   .project-heading-inner h1 {
     font-family: "Abril Fatface", serif;
     font-size: 200%;
-    color: #121212;
+    color: #303030;
   }
 `;
 
@@ -68,6 +68,6 @@ export const ProjectLink = styled.div`
   overflow: hidden;
 
   .project-link-inner a {
-    color: #121212;
+    color: #303030;
   }
 `;
