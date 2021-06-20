@@ -18,6 +18,7 @@ const linkContainerVariants = {
   },
   visible: {
     opacity: 1,
+    delay: 1,
     transition: {
       staggerChildren: 0.5,
     },
