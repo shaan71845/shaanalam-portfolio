@@ -66,22 +66,10 @@ function MyApp({ Component, pageProps, router }) {
         />
       </Head>
       <GlobalStyle />
-      <div
-        className="pt-20"
-        style={{
-          maxWidth: "100vw",
-          width: "100vw",
-          overflow: "hidden",
-        }}
-      >
-        <AnimatePresence
-          initial={false}
-          exitBeforeEnter
-          onExitComplete={transitionCallback}
-        >
-          <Component {...pageProps} key={router.route} one={"one"} />
-        </AnimatePresence>
-      </div>
+
+      <AnimatePresence initial={false} exitBeforeEnter>
+        <Component {...pageProps} key={router.route} one={"one"} />
+      </AnimatePresence>
     </>
   );
 }
