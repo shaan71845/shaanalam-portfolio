@@ -18,7 +18,7 @@ export const parentContainerVariant = {
     },
   },
   exit: {
-    transform: "translateX(-5%)",
+    transform: "translateX(-300px)",
     transition: {
       duration: 0.6,
     },
@@ -40,12 +40,12 @@ const logoVariants = {
 export const svgVariants = {
   hidden: {
     opacity: 0,
-    display: "none",
+    display: "block",
   },
   visible: {
     opacity: 0,
-    display: "none",
     transition: { delay: 0.5, ease: "easeInOut" },
+    display: "block",
   },
   exit: {
     opacity: 1,
@@ -88,7 +88,7 @@ const withTransition = (OriginalComponent) => {
         className={styles["slide-in"]}
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.3 }}
         exit={{ scaleX: 1 }}
         transition={{ duration: 1 }}
       />
@@ -96,7 +96,7 @@ const withTransition = (OriginalComponent) => {
         className={styles["slide-out"]}
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.3 }}
         exit={{ scaleX: 0 }}
         transition={{ duration: 1 }}
       />
