@@ -1,29 +1,5 @@
-import { SlideIn, SlideOut } from "./withTransition.sc";
 import styles from "../styles/PageTransition.module.scss";
 import { motion } from "framer-motion";
-
-export const parentContainerVariant = {
-  hidden: {
-    opacity: 0,
-    transform: "translateX(300px)",
-  },
-  visible: {
-    opacity: 1,
-    transform: "translateX(0px)",
-    transition: {
-      delay: 0.2,
-      type: "spring",
-      bounce: 0,
-      damping: 20,
-    },
-  },
-  exit: {
-    transform: "translateX(-300px)",
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
 
 const logoVariants = {
   hidden: {
