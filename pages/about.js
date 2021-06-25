@@ -8,8 +8,10 @@ import Navbar from "../components/Navbar";
 
 const About = ({ about, experiences }) => {
   const [headerRef, headerInView] = useInView();
+  const [skillsHeaderRef, skillsHeaderInView] = useInView();
 
   const headerControls = useAnimation();
+  const skillsheaderControls = useAnimation();
 
   useEffect(() => {
     if (headerInView) {
@@ -19,46 +21,113 @@ const About = ({ about, experiences }) => {
     }
   }, [headerInView, headerControls]);
 
+  useEffect(() => {
+    if (skillsHeaderInView) {
+      skillsheaderControls.start({
+        scaleX: 0,
+      });
+    }
+  }, [skillsHeaderInView, skillsheaderControls]);
+
   return (
-    <section className={styles.about}>
-      <Navbar />
-      <div className={styles.container}>
-        <div className={styles["hero-content"]}>
-          <header className={styles.header}>
-            <h1>
-              <motion.div
-                className={styles["h1-inner"]}
-                initial={{ scaleX: 1 }}
-                animate={headerControls}
-                transition={{ ease: "easeInOut", duration: 0.5, delay: 0.8 }}
-                ref={headerRef}
-              ></motion.div>
-              Shaan Alam
-            </h1>
-          </header>
-          <motion.p
+    <>
+      <section className={styles.about}>
+        <Navbar />
+        <div className={styles.container}>
+          <div className={styles["hero-content"]}>
+            <header className={styles.header}>
+              <h1>
+                <motion.div
+                  className={styles["h1-inner"]}
+                  initial={{ scaleX: 1 }}
+                  animate={headerControls}
+                  transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
+                  ref={headerRef}
+                ></motion.div>
+                Shaan Alam
+              </h1>
+            </header>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeInOut", delay: 1.2 }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Accusantium eligendi iure dolorem molestiae ipsum unde, cum, odio
+              porro excepturi odit ut minima assumenda recusandae facere eaque
+              magni totam pariatur. Iure.ima assumenda recusandae facere eaque
+              magni totam pariatur. Iure.ima assumenda recusandae facere eaque
+              magni totam pariatur. Iure.
+            </motion.p>
+          </div>
+          <motion.div
+            className={styles.hero}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium eligendi iure dolorem molestiae ipsum unde, cum, odio
-            porro excepturi odit ut minima assumenda recusandae facere eaque
-            magni totam pariatur. Iure.ima assumenda recusandae facere eaque
-            magni totam pariatur. Iure.ima assumenda recusandae facere eaque
-            magni totam pariatur. Iure.
-          </motion.p>
+            <img src="/images/myelf.png" alt="Shaan Alam" />
+          </motion.div>
         </div>
-        <motion.div
-          className={styles.hero}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
-        >
-          <img src="/images/myelf.png" alt="Shaan Alam" />
-        </motion.div>
-      </div>
-    </section>
+      </section>
+      <section className={styles.skills}>
+        <div className={styles.container}>
+          <h1>
+            <motion.div
+              initial={{ scaleX: 1 }}
+              animate={skillsheaderControls}
+              transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
+              ref={skillsHeaderRef}
+              className={styles["h1-inner"]}
+            ></motion.div>
+            My Skills
+          </h1>
+          <div className={styles["skills-grid"]}>
+            <div className={styles["skills-container"]}>
+              <div className={styles.skill}>
+                <h4>Markup Languages</h4>
+                <img src="/images/icons/html.svg" alt="HTML 5" />
+                <img src="/images/icons/css.svg" alt="CSS 3" />
+                <img src="/images/icons/sass.svg" alt="Sass" />
+              </div>
+            </div>
+            <div className={styles["skills-container"]}>
+              <div className={styles.skill}>
+                <h4>Programming Languages Languages</h4>
+                <img src="/images/icons/js.svg" alt="JavaScript" />
+                <img src="/images/icons/python.svg" alt="Python" />
+              </div>
+            </div>
+            <div className={styles["skills-container"]}>
+              <div className={styles.skill}>
+                <h4>Front-End Tech</h4>
+                <img src="/images/icons/react.svg" alt="ReactJS" />
+              </div>
+            </div>
+            <div className={styles["skills-container"]}>
+              <div className={styles.skill}>
+                <h4>Backend Tech</h4>
+                <img src="/images/icons/nodejs.svg" alt="NodeJs" />
+                <img src="/images/icons/firebase.svg" alt="Firebase" />
+                <img src="/images/icons/express.svg" alt="ExpressJS" />
+              </div>
+            </div>
+            <div className={styles["skills-container"]}>
+              <div className={styles.skill}>
+                <h4>State Management</h4>
+                <img src="/images/icons/redux.svg" alt="Redux" />
+              </div>
+            </div>
+            <div className={styles["skills-container"]}>
+              <div className={styles.skill}>
+                <h4>Design</h4>
+                <img src="/images/icons/figma.svg" alt="Redux" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

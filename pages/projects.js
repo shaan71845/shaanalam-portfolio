@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import projectStyles from "../styles/Projects.module.scss";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { slideUpVariants } from "../utils/variants";
 import Project from "../components/Project/";
 import withTransition from "../HOC/withTransition";
@@ -64,7 +62,7 @@ const Projects = ({ projects }) => {
       <section className={projectStyles["projects-section"]}>
         <div className={projectStyles.projects}>
           {projects?.map((project) => (
-            <Project project={project} />
+            <Project project={project} key={project.slug} />
           ))}
         </div>
       </section>
