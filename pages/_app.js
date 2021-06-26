@@ -10,11 +10,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-   background: #fff;
   }
 
   ::-webkit-scrollbar {
-    width: 7px;
+    width: 15px;
   }
 
   /* Track */
@@ -35,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps, router }) {
-
   return (
     <>
       <Head>

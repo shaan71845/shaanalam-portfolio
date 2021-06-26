@@ -6,6 +6,10 @@ export const PostWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
   grid-gap: 1em;
+
+  @media screen and (max-width: 450px) {
+    margin: 3em 0;
+  }
 `;
 
 export const PostCover = styled.div`
@@ -30,6 +34,10 @@ export const PostCover = styled.div`
 
 export const PostDescription = styled.div`
   padding: 0 2rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 0;
+  }
 `;
 
 export const PostHeading = styled.div`
@@ -41,6 +49,10 @@ export const PostHeading = styled.div`
     font-family: "Abril Fatface", serif;
     font-size: 200%;
     color: #303030;
+
+    @media screen and (max-width: 600px) {
+      font-size: 130%;
+    }
   }
 `;
 

@@ -24,6 +24,11 @@ const Home = () => {
     <>
       <Navbar />
       <div className={styles.home}>
+        <img
+          src="/images/home-bg.svg"
+          alt="Home background"
+          className={styles["home-bg"]}
+        />
         <div className={styles["small-header"]}>
           <motion.h5
             variants={smallHeaderVariant}

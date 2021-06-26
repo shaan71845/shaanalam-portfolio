@@ -76,7 +76,7 @@ const Project = ({ project }) => {
           alt="Covid Tracker"
           initial={{ scale: 1.6 }}
           animate={imageControls}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
+          transition={{ delay: 0.2, duration: 0.7, ease: "easeInOut" }}
         />
       </ProjectCover>
       <ProjectDescription>

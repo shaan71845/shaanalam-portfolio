@@ -19,7 +19,7 @@ const Blogs = ({ posts }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 0.8 }}
+                transition={{ duration: 0.2, ease: "easeInOut", delay: 0.8 }}
               >
                 Some of the blogs
               </motion.div>
@@ -29,7 +29,7 @@ const Blogs = ({ posts }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+                transition={{ duration: 0.3, ease: "easeInOut", delay: 0.9 }}
               >
                 I've written!!
               </motion.div>
@@ -41,7 +41,7 @@ const Blogs = ({ posts }) => {
                 variants={slideUpVariants}
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+                transition={{ duration: 0.4, ease: "easeInOut", delay: 1 }}
               >
                 I write blogs about Frontend Development, backend development,
                 and anything related to coding.
