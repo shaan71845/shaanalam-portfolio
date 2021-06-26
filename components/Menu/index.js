@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Link from "next/link";
 import {
   Wrapper,
@@ -6,7 +5,6 @@ import {
   LinkContainer,
   LinkContainerInner,
 } from "./Menu.sc";
-import { AnimatePresence, motion } from "framer-motion";
 
 const menuLinkVariants = {
   hidden: {
