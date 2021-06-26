@@ -45,7 +45,8 @@ export const pathVariants = {
   },
 };
 
-/** @Type - Higher Order Component (HOC)
+/**
+ * @Type - Higher Order Component (HOC)
  * @Desc - Will return the Original component with the <SlideIn /> and <SlideOut /> component
  */
 

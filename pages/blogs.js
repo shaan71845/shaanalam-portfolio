@@ -1,6 +1,3 @@
-import { BlogSection, Container, BlogGrid } from "../styled-components/blogs";
-import Sidebar from "../components/Sidebar";
-import Post from "../components/Post";
 import { motion } from "framer-motion";
 import blogStyles from "../styles/Blog.module.scss";
 import Navbar from "../components/Navbar";
