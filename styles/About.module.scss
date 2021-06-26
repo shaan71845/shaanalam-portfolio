@@ -1,3 +1,5 @@
+@import "config";
+
 .about {
   width: 100%;
   height: auto;
@@ -7,12 +9,20 @@
     margin: auto;
     overflow: hidden;
     display: flex;
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
   }
 
   .hero-content {
     flex: 1;
 
     .header {
+      @include tablet {
+        margin-top: 10px;
+      }
+
       margin-top: 100px;
       margin-bottom: 30px;
 
@@ -22,6 +32,10 @@
         font-family: "Abril Fatface", serif;
         color: #303030;
         font-size: 300%;
+
+        @include mobileL {
+          text-align: center;
+        }
 
         .h1-inner {
           position: absolute;
@@ -42,12 +56,20 @@
       font-family: "Alegreya", sans-serif;
       line-height: 1.6;
       color: rgba(0, 0, 0, 0.6);
+
+      @include mobileL {
+        text-align: center;
+      }
     }
   }
 
   .hero {
     flex: 1;
     position: relative;
+
+    @include mobileL {
+      text-align: center;
+    }
 
     .hero-image {
       opacity: 0;
@@ -58,6 +80,13 @@
       height: 80%;
       object-fit: cover;
       margin-left: 100px;
+
+      @include tablet {
+        margin-left: 0;
+        height: 200px !important;
+        width: 200px !important;
+        border-radius: 100%;
+      }
     }
   }
 }
@@ -74,10 +103,13 @@
   h1 {
     position: relative;
     width: -moz-fit-content;
-    width: -webkit-fit-content;
     font-family: "Abril Fatface", serif;
     color: #303030;
     font-size: 300%;
+
+    @include mobileL {
+      text-align: center;
+    }
 
     .h1-inner {
       position: absolute;
