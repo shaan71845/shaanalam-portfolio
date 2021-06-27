@@ -30,6 +30,7 @@
     h1 {
       font-family: "Abril Fatface", sans-serif;
       font-size: 300%;
+      color: #303030;
 
       .h1-inner {
         position: relative;
@@ -77,8 +78,6 @@
 }
 
 .skills {
-  height: 100vh;
-
   .container {
     width: 90%;
     margin: auto;
@@ -88,6 +87,7 @@
   h1 {
     font-family: "Abril Fatface", sans-serif;
     font-size: 300%;
+    color: #303030;
 
     .h1-inner {
       position: relative;
@@ -117,29 +117,3 @@
     }
   }
 }
-
-// h1 {
-//   position: relative;
-//   width: -moz-fit-content;
-//   font-family: "Abril Fatface", serif;
-//   color: #303030;
-//   font-size: 300%;
-
-//   @include mobileL {
-//     text-align: center;
-//   }
-
-//   .h1-inner {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     z-index: 2;
-//     width: 100%;
-//     background: #303030;
-//     transform-origin: right;
-//     transform: scaleX(1);
-//   }
-// }
-// }

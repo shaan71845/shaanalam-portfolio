@@ -5,7 +5,6 @@ import gfm from "remark-gfm";
 import Moment from "react-moment";
 import withTransition from "../../HOC/withTransition";
 import Link from "next/link";
-import Navbar from "../../components/Navbar";
 
 const Post = ({ post }) => {
   const renderers = {
@@ -19,7 +18,6 @@ const Post = ({ post }) => {
 
   return (
     <section className={styles.post}>
-      <Navbar />
       <div className={styles.container}>
         <Link href="/blogs" scroll={false}>
           <a className={styles["go-back-btn"]}>Go Back</a>

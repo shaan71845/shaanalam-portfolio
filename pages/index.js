@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.scss";
 import buttonStyles from "../styles/Button.module.scss";
 import { motion } from "framer-motion";
@@ -22,7 +21,6 @@ import {
 const Home = () => {
   return (
     <>
-      <Navbar />
       <div className={styles.home}>
         <img
           src="/images/home-bg.svg"

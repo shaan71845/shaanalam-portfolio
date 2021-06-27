@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const GlobalStyle = createGlobalStyle`
  * {
@@ -66,9 +68,11 @@ function MyApp({ Component, pageProps, router }) {
           width: "100vw",
         }}
       >
+        <Navbar />
         <AnimatePresence initial={true} exitBeforeEnter>
           <Component {...pageProps} key={router.route} one={"one"} />
         </AnimatePresence>
+        {router.pathname.length > 1 && <Footer />}
       </div>
     </>
   );

@@ -1,5 +1,4 @@
 import projectStyles from "../styles/Projects.module.scss";
-import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import { slideUpVariants } from "../utils/utils";
 import Project from "../components/Project/";
@@ -10,7 +9,6 @@ const Projects = ({ projects }) => {
   return (
     <>
       <section className={projectStyles["projects-intro-section"]}>
-        <Navbar />
         <div className={projectStyles.container}>
           <h1>
             <div className={projectStyles["h1-inner"]}>

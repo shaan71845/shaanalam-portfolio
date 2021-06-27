@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import blogStyles from "../styles/Blog.module.scss";
-import Navbar from "../components/Navbar";
 import { slideUpVariants } from "../utils/utils";
 import BlogPost from "../components/BlogPost";
 import withTransition from "../HOC/withTransition";
@@ -11,7 +10,6 @@ const Blogs = ({ posts }) => {
   return (
     <>
       <section className={blogStyles["blogs-intro-section"]}>
-        <Navbar />
         <div className={blogStyles.container}>
           <h1>
             <div className={blogStyles["h1-inner"]}>
