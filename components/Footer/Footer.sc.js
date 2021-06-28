@@ -12,9 +12,9 @@ export const Container = styled.div`
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1em;
+  grid-gap: 2em;
 
-  h3 {
+  h1, h3 { 
     font-family: "Alegreya", sans-serif;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 1em;

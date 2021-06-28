@@ -24,7 +24,7 @@ const Footer = () => {
         </Logo>
         <FooterContent>
           <Col>
-            <h3>Links</h3>
+            <h1>Links</h1>
             <ul>
               <li>
                 <Link href="/">
@@ -49,7 +49,7 @@ const Footer = () => {
             </ul>
           </Col>
           <Col>
-            <h3>Connect with Me</h3>
+            <h1>Connect with Me</h1>
             <div className="social-links">
               <a
                 href="https://www.instagram.com/shaancodes/"
