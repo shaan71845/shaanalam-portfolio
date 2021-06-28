@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterWrapper = styled.footer`
   border-top: 1px solid #ddd;
   background: white;
-  padding: 2em;
+  padding: 4em 0;
   width: 100%;
 `;
 
