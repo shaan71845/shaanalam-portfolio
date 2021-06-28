@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import bash from "react-syntax-highlighter/dist/cjs/languages/hljs/bash";
-import javascript from "react-syntax-highlighter/dist/cjs/languages/hljs/javascript";
 import synthwave84 from "react-syntax-highlighter/dist/cjs/styles/prism/synthwave84";
-import styled from "styled-components";
 import { Container, Titlebar } from "./CodeSnippet.sc";
 
 const CodeSnippet = ({ code, language }) => {
