@@ -5,6 +5,7 @@ import gfm from "remark-gfm";
 import Moment from "react-moment";
 import withTransition from "../../HOC/withTransition";
 import Link from "next/link";
+import Navbar from "../../components/Navbar";
 
 const Post = ({ post }) => {
   const renderers = {
@@ -17,43 +18,46 @@ const Post = ({ post }) => {
   };
 
   return (
-    <section className={styles.post}>
-      <div className={styles.container}>
-        <Link href="/blogs" scroll={false}>
-          <a className={styles["go-back-btn"]}>Go Back</a>
-        </Link>
-      </div>
-      <header className={styles.header}>
-        <img src={post.cover_image} alt={post.title} />
+    <>
+      <Navbar />
+      <section className={styles.post}>
         <div className={styles.container}>
-          <h1>{post.title}</h1>
-          <div className={styles.tags}>
-            <div className={styles["created-at"]}>
-              <img src={post.user.profile_image} alt="Shaan Alam" />
-              <small>
-                Shaan Alam on{" "}
-                <Moment format="D MMM YYYY">{post.created_at}</Moment>
-              </small>
+          <Link href="/blogs" scroll={false}>
+            <a className={styles["go-back-btn"]}>Go Back</a>
+          </Link>
+        </div>
+        <header className={styles.header}>
+          <img src={post.cover_image} alt={post.title} />
+          <div className={styles.container}>
+            <h1>{post.title}</h1>
+            <div className={styles.tags}>
+              <div className={styles["created-at"]}>
+                <img src={post.user.profile_image} alt="Shaan Alam" />
+                <small>
+                  Shaan Alam on{" "}
+                  <Moment format="D MMM YYYY">{post.created_at}</Moment>
+                </small>
+              </div>
+              {post.tags.map((tag) => (
+                <small key={tag}>#{tag}</small>
+              ))}
             </div>
-            {post.tags.map((tag) => (
-              <small key={tag}>#{tag}</small>
-            ))}
+          </div>
+        </header>
+        <div className={styles.container}>
+          <div className={styles["post-body"]}>
+            <ReactMarkdown
+              className="md-content"
+              renderers={renderers}
+              plugins={[gfm]}
+              linkTarget="_blank"
+            >
+              {post.body_markdown}
+            </ReactMarkdown>
           </div>
         </div>
-      </header>
-      <div className={styles.container}>
-        <div className={styles["post-body"]}>
-          <ReactMarkdown
-            className="md-content"
-            renderers={renderers}
-            plugins={[gfm]}
-            linkTarget="_blank"
-          >
-            {post.body_markdown}
-          </ReactMarkdown>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

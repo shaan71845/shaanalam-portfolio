@@ -34,7 +34,10 @@ const menuVariants = {
   },
 };
 
-const Menu = () => {
+const Menu = ({ setIsMenu }) => {
+  // Close menu on the new page when navigated through navbar
+  const closeMenu = () => setIsMenu(false);
+
   return (
     <Wrapper
       variants={menuVariants}

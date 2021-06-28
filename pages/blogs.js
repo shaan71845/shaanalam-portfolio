@@ -3,12 +3,12 @@ import blogStyles from "../styles/Blog.module.scss";
 import { slideUpVariants } from "../utils/utils";
 import BlogPost from "../components/BlogPost";
 import withTransition from "../HOC/withTransition";
+import Navbar from "../components/Navbar";
 
 const Blogs = ({ posts }) => {
-  console.log(posts);
-
   return (
     <>
+      <Navbar />
       <section className={blogStyles["blogs-intro-section"]}>
         <img
           src="/images/circuit.svg"

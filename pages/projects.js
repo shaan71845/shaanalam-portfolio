@@ -4,10 +4,12 @@ import { slideUpVariants } from "../utils/utils";
 import Project from "../components/Project/";
 import withTransition from "../HOC/withTransition";
 import sanityClient from "../client";
+import Navbar from "../components/Navbar";
 
 const Projects = ({ projects }) => {
   return (
     <>
+    <Navbar />
       <section className={projectStyles["projects-intro-section"]}>
         <img src="/images/circuit.svg" alt="Circuit background" className={projectStyles.circuit} />
         <div className={projectStyles.container}>

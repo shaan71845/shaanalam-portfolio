@@ -4,6 +4,7 @@ import sanityClient from "../client";
 import styles from "../styles/About.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Navbar from "../components/Navbar";
 
 const About = ({ about, experiences }) => {
   const [headerRef, headerInView] = useInView();
@@ -30,6 +31,7 @@ const About = ({ about, experiences }) => {
 
   return (
     <>
+      <Navbar />
       <section className={styles.about}>
         <div className={styles.container}>
           <div className={styles["hero-content"]}>

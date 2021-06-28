@@ -17,10 +17,12 @@ import {
   linkContainerVariant,
   linkVariant,
 } from "../utils/utils";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <div className={styles.home}>
         <img
           src="/images/home-bg.svg"

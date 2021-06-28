@@ -68,7 +68,6 @@ function MyApp({ Component, pageProps, router }) {
           width: "100vw",
         }}
       >
-        <Navbar />
         <AnimatePresence initial={true} exitBeforeEnter>
           <Component {...pageProps} key={router.route} one={"one"} />
         </AnimatePresence>
