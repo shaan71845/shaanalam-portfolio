@@ -32,6 +32,10 @@
       font-size: 300%;
       color: #303030;
 
+      @include mobileL {
+        text-align: center;
+      }
+
       .h1-inner {
         position: relative;
         overflow: hidden;
@@ -88,6 +92,10 @@
     font-family: "Abril Fatface", sans-serif;
     font-size: 300%;
     color: #303030;
+
+    @include mobileL {
+      text-align: center;
+    }
 
     .h1-inner {
       position: relative;
