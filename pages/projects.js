@@ -9,9 +9,13 @@ import Navbar from "../components/Navbar";
 const Projects = ({ projects }) => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <section className={projectStyles["projects-intro-section"]}>
-        <img src="/images/circuit.svg" alt="Circuit background" className={projectStyles.circuit} />
+        <img
+          src="/images/circuit.svg"
+          alt="Circuit background"
+          className={projectStyles.circuit}
+        />
         <div className={projectStyles.container}>
           <h1>
             <div className={projectStyles["h1-inner"]}>
@@ -79,6 +83,7 @@ export async function getStaticProps() {
     slug {
       current
     },
+    body,
     author,
     live_link,
     github_link,

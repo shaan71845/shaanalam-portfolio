@@ -59,7 +59,7 @@ export const ProjectText = styled.div`
   position: relative;
   overflow: hidden;
 
-  .project-text-inner p {
+  .project-text-inner p, .project-text-inner ul {
     line-height: 1.6;
     color: rgba(0, 0, 0, 0.6);
     font-size: 1rem;

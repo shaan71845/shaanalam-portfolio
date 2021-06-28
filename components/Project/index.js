@@ -10,6 +10,7 @@ import {
   ProjectLinks,
   ProjectLink,
 } from "./Project.sc";
+import BlockContent from "@sanity/block-content-to-react";
 
 const Project = ({ project }) => {
   const [headingRef, headingInView] = useInView({
@@ -61,6 +62,8 @@ const Project = ({ project }) => {
     }
   }, [imageInView, imageControls, imageCoverControls]);
 
+  console.log(project);
+
   return (
     <ProjectWrapper>
       <ProjectCover>
@@ -99,13 +102,7 @@ const Project = ({ project }) => {
             animate={textControls}
             transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
           >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At,
-              maxime natus culpa earum. Architecto maiores fuga minima explicabo
-              deleniti dolorem magni corrupti, ut, fugiat facilis in esse soluta
-              iusto molestiae. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Minima, velit.
-            </p>
+            <BlockContent blocks={project?.body} />
           </motion.div>
         </ProjectText>
         <ProjectLinks>

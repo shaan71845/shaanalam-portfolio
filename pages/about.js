@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar";
 import BlockContent from "@sanity/block-content-to-react";
 
 const About = ({ about }) => {
-  // Ref for Skill Header ('My Skills'
+  // Ref for Skill Header ('My Skills')
   const [skillsHeaderRef, skillsHeaderInView] = useInView();
 
   // Animation for Skill Header ('My Skills')
