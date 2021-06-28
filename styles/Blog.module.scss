@@ -1,3 +1,15 @@
+.blogs-intro-section {
+  position: relative;
+  padding-bottom: 15em;
+
+  .circuit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -41,7 +53,6 @@
 }
 
 .blogs-section {
-  padding-top: 15em;
   height: auto;
   width: 100%;
 

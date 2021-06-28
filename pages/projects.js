@@ -9,6 +9,7 @@ const Projects = ({ projects }) => {
   return (
     <>
       <section className={projectStyles["projects-intro-section"]}>
+        <img src="/images/circuit.svg" alt="Circuit background" className={projectStyles.circuit} />
         <div className={projectStyles.container}>
           <h1>
             <div className={projectStyles["h1-inner"]}>

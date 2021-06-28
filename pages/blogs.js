@@ -10,6 +10,11 @@ const Blogs = ({ posts }) => {
   return (
     <>
       <section className={blogStyles["blogs-intro-section"]}>
+        <img
+          src="/images/circuit.svg"
+          alt="Circuit background"
+          className={blogStyles.circuit}
+        />
         <div className={blogStyles.container}>
           <h1>
             <div className={blogStyles["h1-inner"]}>
