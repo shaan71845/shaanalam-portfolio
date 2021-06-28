@@ -50,7 +50,7 @@ const Menu = () => {
             animate="visible"
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <Link href="/" scroll={false}>
+            <Link href="/" scroll={true}>
               Home
             </Link>
           </LinkContainerInner>
@@ -62,7 +62,7 @@ const Menu = () => {
             animate="visible"
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <Link href="/about" scroll={false}>
+            <Link href="/about" scroll={true}>
               About
             </Link>
           </LinkContainerInner>
@@ -74,7 +74,7 @@ const Menu = () => {
             animate="visible"
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <Link href="/projects" scroll={false}>
+            <Link href="/projects" scroll={true}>
               Projects
             </Link>
           </LinkContainerInner>
@@ -86,7 +86,7 @@ const Menu = () => {
             animate="visible"
             transition={{ duration: 1, delay: 0.7 }}
           >
-            <Link href="/blogs" scroll={false}>
+            <Link href="/blogs" scroll={true}>
               Blogs
             </Link>
           </LinkContainerInner>

@@ -68,9 +68,7 @@ const Navbar = ({ theme }) => {
           <span></span>
         </Bars>
       </Container>
-      <AnimatePresence exitBeforeEnter>
-        {isMenu && <Menu theme={theme} />}
-      </AnimatePresence>
+      <AnimatePresence exitBeforeEnter>{isMenu && <Menu />}</AnimatePresence>
     </Nav>
   );
 };
