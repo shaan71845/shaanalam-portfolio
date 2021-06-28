@@ -60,6 +60,10 @@ function MyApp({ Component, pageProps, router }) {
           href="http://fonts.cdnfonts.com/css/operator-mono"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <GlobalStyle />
       <div
